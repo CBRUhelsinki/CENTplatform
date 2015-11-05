@@ -1,0 +1,214 @@
+\documentclass[fleqn,10pt]{wlpeerj}
+
+\usepackage{todonotes}
+
+\graphicspath{{./figs/}}
+
+\title{CENT - Computer Enabled Neuroplasticity Treatment: a modular, extensible platform for neurofeedback with lightweight wearable EEG devices}
+
+\author[1,2]{Benjamin Cowley}
+\author[1]{Jari Torniainen}
+\author[2]{Teemu Itkonen}
+\affil[1]{Brain{\textbullet}Work Research Centre, Finnish Institute of Occupational Health}
+\affil[2]{Cognitive Brain Research Unit, Institute of Behavioural Sciences, University of Helsinki}
+
+\keywords{neurofeedback, electroencephalography, ADHD, computer-enabled, Qt}
+
+\begin{abstract}
+%TODO temporary short abstract...update after writing
+
+\end{abstract}
+
+\begin{document}
+
+\flushbottom
+\maketitle
+\thispagestyle{empty}
+
+
+
+Story/structure is:
+\begin{enumerate}
+	\item Introduction + motivation
+	\begin{itemize}
+		\item we needed a NFB platform and didn’t find anything suitable (why not?)
+		\item we developed CENT platform at the same time as setting up the clinical trial
+		\item we aimed for lots of good things: modular, extensible, state of the art technology, effective but simple UI, minimal but extensible feature set
+		\item other systems exist but CENT fills a niche because...
+	\end{itemize}
+
+	\item Related work
+	\begin{itemize}
+		\item Other neurofeedback platforms
+		\item Abundance of wearable EEG devices
+	\end{itemize}
+
+	\item Architecture - describe the tech. Show where to get it and the compatible parts
+	\begin{itemize}
+		\item CENT-core
+		\item CENT-extensions
+	\end{itemize}
+
+	\item Validation
+	\begin{itemize}
+		\item Malmi therapy?
+		\item Can other validation evidence be generated?
+	\end{itemize}
+
+	\item Discussion
+	\begin{itemize}
+		\item We saw a need and filled it
+		\item Pros and cons
+		\item CENT vs. “Meditation toys”
+		\item Usage scenario
+		\item Future work: Interfacing with bestest systems (like MIDAS)
+	\end{itemize}
+
+	\item Conclusion: CENT platform is great, buy 6!
+\end{enumerate}
+
+
+\section{Introduction}
+
+% some motivation
+Biofeedback/neurofeedback is a growing clinical field. Tools for administering feedback treatment tend to be proprietary and fixed/non-extensible. Thus there is a need for a biofeedback platform which is entirely open source, extensible and free. We present the Computer Enabled Neuroplasticity Treatment (CENT) platform to meet this need.
+
+
+% some background
+\subsection{Background}
+\todo[inline,author=Ben]{describe Neurofeedback background…}
+
+Competition / state of the art…
+Random studies
+%http://musaelab.ca/pdfs/C90A.pdf
+%http://europepmc.org/abstract/med/25882342
+%http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4311636/
+%http://www.sciencedirect.com/science/article/pii/S016787601300247X
+
+paid professional products
+% http://bio-medical.com/products/software.html?dir=asc&order=price
+
+23 repos (maybe 2 or 3 decent-looking ones)
+%https://github.com/search?p=1&q=neurofeedback&type=Repositories&utf8=%E2%9C%93
+
+helpful wikipedia page - lists 6 open or GPL warez, inc OpenVIBE
+%https://en.wikipedia.org/wiki/Comparison_of_neurofeedback_software
+
+Free software for specific hardware:
+Nova Tech!
+%http://www.novatecheeg.com/downloads.html
+Vilistus
+%http://www.vilistus.com/software.shtml
+
+
+% some solution
+\subsection{CENT platform}
+Solution: CENT platform. Advantages…
+
+Brief history of CENT use, clinical trial (number)...
+
+
+
+
+
+
+\section{Methods - Architecture}
+The CENT platform is built on Qt…
+
+
+
+
+\section{Results - Validation}
+
+\begin{itemize}
+	\item Clinical trial
+	
+	\item artificial example?
+	
+\end{itemize}
+
+
+\section{Discussion}
+
+\lipsum[10] % Dummy text
+
+
+
+\section{Conclusion}
+
+\lipsum[11] % Dummy text
+
+
+
+\section*{Acknowledgments}
+
+Author credits (FYI JT, TI - I’m pretty sure we need to include some of BLStream in the authors, because we can’t claim to have developed the software nor (I think! gotta check) can we publish something we ‘just bought’):
+\begin{itemize}
+	\item BC co-designed the platform UI, designed the clinical trial where it was used, developed the Matlab tool for results review, and co-authored the draft
+	\item JT co-designed and developed the OpenVibe ‘scenarios’, co-authored the draft, etc, etc
+	\item TI tested and debugged the CENT platform, co-authored the draft, etc, etc
+	\item Arthur Zielazny co-designed the platform UI and the CENT Qt framework
+	\item Robert Rabenel co-designed and developed the CENT Qt framework
+	\item N. N. developed the CENT Qt framework(?) and the movie player application
+\end{itemize}
+
+
+
+\newpage
+
+\subsection*{Some \LaTeX{} Examples}
+\label{sec:examples}
+
+Use section and subsection commands to organize your document. \LaTeX{} handles all the formatting and numbering automatically. Use ref and label commands for cross-references.
+
+\subsection*{Figures and Tables}
+
+Use the table and tabular commands for basic tables --- see Table~\ref{tab:widgets}, for example. You can upload a figure (JPEG, PNG or PDF) using the project menu. To include it in your document, use the includegraphics command.
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{l|r}
+		Item & Quantity \\\hline
+		Widgets & 42 \\
+		Gadgets & 13
+	\end{tabular}
+	\caption{\label{tab:widgets}An example table.}
+\end{table}
+
+\subsection*{Citations}
+
+LaTeX formats citations and references automatically using the bibliography records in your .bib file, which you can edit via the project menu. Use the cite command for an inline citation, like \cite{Figueredo:2009dg}, and the citep command for a citation in parentheses \citep{Figueredo:2009dg}.
+
+\subsection*{Mathematics}
+
+\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
+$$S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+= \frac{1}{n}\sum_{i}^{n} X_i$$
+denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+
+\subsection*{Lists}
+
+You can make lists with automatic numbering \dots
+
+\begin{enumerate}[noitemsep] 
+	\item Like this,
+	\item and like this.
+\end{enumerate}
+\dots or bullet points \dots
+\begin{itemize}[noitemsep] 
+	\item Like this,
+	\item and like this.
+\end{itemize}
+\dots or with words and descriptions \dots
+\begin{description}
+	\item[Word] Definition
+	\item[Concept] Explanation
+	\item[Idea] Text
+\end{description}
+
+We hope you find write\LaTeX\ useful for your PeerJ submission, and please let us know if you have any feedback. Further examples with dummy text are included in the following pages.
+
+
+\bibliography{CENTrefs}
+
+\end{document}
