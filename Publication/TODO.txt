@@ -1,44 +1,72 @@
+CENT publishing plan
+
+
 Step 1.
-Literature review of similar software and needs. JT
-    See draft below for initial links...
+Literature review of similar software[a] and needs. JT
+        See CENTplatform.tex below for initial links...
+
+
 Step 2.
 Split extra applications to a separate independent Github-repo. Keep only core-CENT files in the CBRU-repo. JT
+
 
 Step 3.
 Rationalization of the documentation AKA how to build/use the thing (no code documentation). Update documentation regarding plugins accordingly (see step 2). TI, BC
 
+
 Step 4.
 Draft a draft and look for fundings. BC
 
+
 Step 5.
 Add MIT license boilerplate to the code - or licence from the repo root? TI
+
 
 Step 6.
 Write the manuscript + validation. JT, TI, BC
 See below for draft beginnings.
 
+
 Step 7.
 Publish 
 
 
-CENTExtra
-	GameTutorial
-	IAF Calculator Python Standalone
-		TODO::Documentation
-	Patient History Detailed Plots
-		TODO::Documentation
-CENTPackage
-	
-CENTSources
-	CENTSystemDocumentation
-		CENTSystemExtendedDocumentation
-			TODO::revise extra documentation
-				1:section 1.6
-				2:section 2.4.1 Astrocomet game
-				3:check Appendix A
-				4:check Appendix B
-				5:delete Appendix C?
-CENTUsage
-	TODO::check CENTTechnicalChecklist
-	TODO::check Appendix I
-	TODO::check Appendix II
+
+
+CODE CLEANUP DETAILS
+Core repo should serve 4 functions:
+1. Install CENT, from CENTPackage (with documentation)
+2. Build (with build instructions from documentation - notice that extended documentation ...)
+3. View sources
+4. Extend: plugins, OV scenarios, new menu functions (e.g. call some external exe)
+
+
+Detailed, ordered clean up (tentative, subject to Teemu’s build experience):
+1. CENTExtra: move ‘IAF Calculator…’, ‘Patient History…’ to new repo - JT
+2. Mapping Tool (let’s check this only after rebuild) - BC
+   a. CENTPackage: move .exe / .dll package at ./PatientAnonymisationMappingTool
+   b. (tentative!) CENTSources move: 
+      i. ./cent/CENTSystem/MappingTool
+      ii. ./cent/Documentation/MappingTool
+      iii. ./cent/CENTSystem/build/buildMappingToolPackage.bat
+   c. cut Mapping Tool from core documentation 
+      i. (what about obfuscated platform output? Maybe it is not relevant to the core package, i.e. core package only serves to perform NFB, not to also analyse patient history)
+   d. create package from sources and .exe / .dll package
+3. Documentation - TI
+   a. CENTSystemDocumentation: move CENTSystemExtendedDocumentation
+   b. CENTUsage: move everything
+   c. In extra-stuff repo, create extended documentation covering all
+      i. extra programs/packages:
+         -. ‘IAF Calculator…’
+         -. ‘Patient History…’
+         -. MappingTool
+      ii. usage: ‘TechnicalChecklist’, Appendix I and II
+   d. Notice that core docs will have to be edited, to 
+      i. remove reference to HY and BLStream
+      ii. include better build instructions from extended documentation(?)
+   e. Extended documentation clean-up (preliminary):
+      i. section 1.6
+      ii. section 2.4.1 Astrocomet game
+      iii. check Appendix A
+      iv. check Appendix B
+      v. delete Appendix C?

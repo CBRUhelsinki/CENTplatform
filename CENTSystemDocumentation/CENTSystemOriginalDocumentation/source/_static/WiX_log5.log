@@ -1,0 +1,21 @@
+
+
+C:\C3NT\cent\CENTSystem\build>light -ext WixUIExtension.dll output\obj\CentScen
+rios4.wixobj output\obj\CentScenarios8.wixobj output\obj\CentGamesTutorials.wix
+bj output\obj\CENTInstaller.wixobj  output\obj\CentOVDirDlg.wixobj output\obj\C
+ntWixUi_InstallDir.wixobj output\obj\CentBrowseDlg.wixobj output\obj\CentDataDi
+Dlg.wixobj -o output\CENTInstaller"".msi
+Windows Installer Xml Linker version 3.6.3303.0
+Copyright (C) Outercurve Foundation. All rights reserved.
+
+C:\C3NT\cent\CENTSystem\build\CENTInstaller.wxs(140) : error LGHT0103 : The sys
+em cannot find the file '..\\SDK\\qtmobility\\plugins\mediaservice\dsengine.dll
+.
+C:\C3NT\cent\CENTSystem\build\CENTInstaller.wxs(159) : error LGHT0103 : The sys
+em cannot find the file '..\\output\\plugins\MediaGamePlugin.dll'.
+C:\C3NT\cent\CENTSystem\build\CENTInstaller.wxs(54) : error LGHT0103 : The syst
+m cannot find the file 'C:\Program Files (x86)\\Common Files\\Merge Modules\\Mi
+rosoft_VC100_CRT_x86.msm'.
+
+C:\C3NT\cent\CENTSystem\build>REM msiexec /I output\CENTInstaller.msi /l*v outp
+t\log.txt
