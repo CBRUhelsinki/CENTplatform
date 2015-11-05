@@ -16,6 +16,7 @@
 
 \begin{abstract}
 %TODO temporary short abstract...update after writing
+Biofeedback/neurofeedback is a growing clinical field. Tools for administering feedback treatment tend to be proprietary and fixed/non-extensible. Thus there is a need for a biofeedback platform which is entirely open source, extensible and free. We present the Computer Enabled Neuroplasticity Treatment (CENT) platform to meet this need.
 
 \end{abstract}
 
@@ -24,6 +25,10 @@
 \flushbottom
 \maketitle
 \thispagestyle{empty}
+
+\newpage
+
+
 
 
 
@@ -67,11 +72,19 @@ Story/structure is:
 	\item Conclusion: CENT platform is great, buy 6!
 \end{enumerate}
 
+\newpage
+
+
+
 
 \section{Introduction}
 
 % some motivation
-Biofeedback/neurofeedback is a growing clinical field. Tools for administering feedback treatment tend to be proprietary and fixed/non-extensible. Thus there is a need for a biofeedback platform which is entirely open source, extensible and free. We present the Computer Enabled Neuroplasticity Treatment (CENT) platform to meet this need.
+Neurofeedback/Biofeedback (NFB) is a growing field, with extensive clinical use, a large body of research literature, and applications also in performance enhancement, entertainment, and stress relief. 
+
+Tools for administering feedback treatment tend to be proprietary and fixed/non-extensible. Thus there is a need for a biofeedback platform which is entirely open source, extensible and free. We present the Computer Enabled Neuroplasticity Treatment (CENT) platform to meet this need.
+
+
 
 
 % some background
@@ -103,19 +116,44 @@ Vilistus
 
 % some solution
 \subsection{CENT platform}
-Solution: CENT platform. Advantages…
 
-Brief history of CENT use, clinical trial (number)...
+% development: brief history of CENT use, clinical trial (number)...
+\todo[inline]{development: brief history of CENT use, clinical trial (number)}
+The CENT platform was developed to facilitate the CENT clinical trial of NFB treatment for adult ADHD, conducted at the University of Helsinki, Finland (REF). 
 
 
+% specifics: CENT platform. Advantages
+\todo[inline]{specifics: CENT platform. Advantages}
+The CENT platform was designed to connect light-weight EEG amplifiers to a simple, easy-to-use interface for running NFB sessions. The platform's workflow is fixed but adaptable, with configurable settings for personalisation of the treatment. 
+\begin{enumerate}
+	\item ...modifiers for the baseline values ...
+	\item ...different games...
+	\item ...performance review options...
+\end{enumerate}
 
 
 
 
 \section{Methods - Architecture}
+% platform technology
+\todo[inline]{platform technology}
 The CENT platform is built on Qt…
 
+% signal server technology
+\todo[inline]{signal server technology}
+CENT connects the amplifier to the interface via the brain-computer-interface (BCI) signal acquisition system OpenVibe. OpenVibe is an open-source, graphical programming environment\dots
 
+% modular, extensible
+\todo[inline]{modular, extensible}
+The core software defines a workflow for NFB sessions, but can be extended by three means (short of actually adapting the source):
+\begin{enumerate}
+	\item \textit{plugins}
+	
+	\item \textit{OV scenarios}
+	
+	\item \textit{menu functions}
+	
+\end{enumerate}
 
 
 \section{Results - Validation}
@@ -128,9 +166,14 @@ The CENT platform is built on Qt…
 \end{itemize}
 
 
+
+
+
 \section{Discussion}
 
 \lipsum[10] % Dummy text
+
+
 
 
 
@@ -140,18 +183,35 @@ The CENT platform is built on Qt…
 
 
 
+
+
+
+
+
 \section*{Acknowledgments}
 
-Author credits (FYI JT, TI - I’m pretty sure we need to include some of BLStream in the authors, because we can’t claim to have developed the software nor (I think! gotta check) can we publish something we ‘just bought’):
+Author credits:
 \begin{itemize}
 	\item BC co-designed the platform UI, designed the clinical trial where it was used, developed the Matlab tool for results review, and co-authored the draft
-	\item JT co-designed and developed the OpenVibe ‘scenarios’, co-authored the draft, etc, etc
-	\item TI tested and debugged the CENT platform, co-authored the draft, etc, etc
-	\item Arthur Zielazny co-designed the platform UI and the CENT Qt framework
-	\item Robert Rabenel co-designed and developed the CENT Qt framework
-	\item N. N. developed the CENT Qt framework(?) and the movie player application
+	
+	\item JT co-designed and developed the OpenVibe ‘scenarios’, co-authored the draft, etc, etc [insert what you did]
+	
+	\item TI tested and debugged the CENT platform, co-authored the draft, etc, etc [insert what you did]
+	
 \end{itemize}
 
+The authors thank the software engineers:
+\begin{itemize}
+	\item Arthur Zielazny co-designed the platform UI and the CENT Qt framework
+
+	\item Robert Rabenel co-designed and developed the CENT Qt framework
+
+	\item N. N. co-developed the CENT Qt framework(?) and the movie player application
+
+\end{itemize}
+
+Testers and contributors:
+Authors would like to thank Elisa Kallioniemi, Markus Kivikangas, Christina M. Krause, Laura Kauhanen, Mona Moisala and Marko Repo for contributions during design, development and testing.
 
 
 \newpage
