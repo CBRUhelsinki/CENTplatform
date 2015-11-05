@@ -1,3 +1,26 @@
+Step 1.
+Literature review of similar software and needs. JT
+    See draft below for initial links...
+Step 2.
+Split extra applications to a separate independent Github-repo. Keep only core-CENT files in the CBRU-repo. JT
+
+Step 3.
+Rationalization of the documentation AKA how to build/use the thing (no code documentation). Update documentation regarding plugins accordingly (see step 2). TI, BC
+
+Step 4.
+Draft a draft and look for fundings. BC
+
+Step 5.
+Add MIT license boilerplate to the code - or licence from the repo root? TI
+
+Step 6.
+Write the manuscript + validation. JT, TI, BC
+See below for draft beginnings.
+
+Step 7.
+Publish 
+
+
 CENTExtra
 	GameTutorial
 	IAF Calculator Python Standalone
