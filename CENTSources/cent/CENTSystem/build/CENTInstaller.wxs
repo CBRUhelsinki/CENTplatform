@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+
+	<!-- TODO
+		- set OVINSTALLDIR to drive C, now it ruins writing to registry correct path
+		- localization for newly added custom strings
+	-->
+
+	<!-- KNOWN ISSUES
+		- warning LGHT1077 for Qt's binary files: http://wix.mindcapers.com/wiki/ICE60
+	-->
+
+	<!-- ############ MAKE SURE THAT BELOW DEFINES ARE CORRECT ############ -->	
+	<!-- Those paths has to end with "\" if contains non-empty path -->
+	<?define OutputFilesDir="..\\output\\" ?>
+	<?define QtBinaryDir="C:\\Qt\\4.8.0\\bin\\" ?>
+	<?define QtPluginsDir="C:\\Qt\\4.8.0\\plugins\\" ?>
+	<?define ScenariosDir="..\\OVScenarios\\" ?>
+	<?define QtMobilityDir="..\\SDK\\qtmobility\\bin\\" ?>
+
+	<!-- PRogram files dir-->
+	<?if $(env.PROCESSOR_ARCHITECTURE) = AMD64 ?>
+		<?define ProgramFilesDir=$(env.ProgramFiles(x86)) ?>
+	<?else?>
+		<?define ProgramFilesDir=$(env.ProgramFiles) ?>
+	<?endif?>
+	<!-- Visual C++ Redistributables defines --> 
+	<?define VCMergeModulesDir="$(var.ProgramFilesDir)\\Common Files\\Merge Modules\\" ?>
+	<?ifdef Debug ?>
+		<?define VCMergeModuleName="Microsoft_VC100_DebugCRT_x86.msm" ?>
+	<?else?>
+		<?define VCMergeModuleName="Microsoft_VC100_CRT_x86.msm" ?>
+	<?endif?>
+
+	<!-- Drive C path-->
+	<?define DriveC="C:\\" ?>
+	<!-- ################################################################## -->
+
+	<!-- Post fix used to define name of the source file-->
+	<?ifdef Debug ?>
+		<?define postFix="d" ?>
+	<?else?>
+		<?define postFix="" ?>
+	<?endif?>
+
+	<!-- Product, package definitions -->
+	<Product Id="F3B5853F-BF0E-4582-B8E2-10D5DCCF95AB" Name="CENT" Language="1033"
+		Version="1.0.0.0" Manufacturer="BLStream" UpgradeCode="756517A9-65A7-4a7c-8862-7E712149A7FE">
+
+	<Package InstallerVersion="300" Compressed="yes" InstallScope="perMachine" />
+	<Media Id="1" Cabinet="installer.cab" EmbedCab="yes" />
+
+	<DirectoryRef Id="TARGETDIR">
+		<Merge Id="VCRedist" SourceFile="$(var.VCMergeModulesDir)$(var.VCMergeModuleName)" DiskId="1" Language="0"/>
+	</DirectoryRef>
+
+	<Directory Id="TARGETDIR" Name="SourceDir">
+		<Directory Id="ProgramFilesFolder">
+			<Directory Id="OVINSTALLDIR" />
+			<Directory Id="PATIENTSDATADIR" />
+			<Directory Id="DesktopFolder" Name="Desktop" />
+			<Directory Id="INSTALLLOCATION" Name="CENT">
+
+				<Component Id="CENTApplication" Guid="1942CC16-45B3-4E30-935D-9BA0FD497D8E">
+					<File Id="CENTApplication.exe" Name="CENTApplication$(var.postFix).exe" DiskId="1" Source="$(var.OutputFilesDir)CENTApplication$(var.postFix).exe" KeyPath="yes">
+						<Shortcut Id="DesktopShortcut" Directory="DesktopFolder" Name="CENT" WorkingDirectory="INSTALLLOCATION" Advertise="yes" />
+					</File>
+				</Component>
+
+				<Component Id="OpenViBEAcquisitionServerDynamic" Guid="5421D028-1020-4B1B-83F9-ADF7B049C79E">
+					<File Id="OpenViBEAcquisitionServerDynamic.exe" Name="OpenViBEAcquisitionServerDynamic.exe" DiskId="1" Source="$(var.OutputFilesDir)OpenViBEAcquisitionServerDynamic.exe" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="OpenViBEDesignerDynamic" Guid="A2430AF2-5897-49C8-90BD-139432A079B5">
+					<File Id="OpenViBEDesignerDynamic.exe" Name="OpenViBEDesignerDynamic.exe" DiskId="1" Source="$(var.OutputFilesDir)OpenViBEDesignerDynamic.exe" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="EnobioAPI" Guid="17F34A1C-E6C5-4EBA-BE12-F1FD7AC828E7">
+				  <File Id="EnobioAPI.dll" Name="EnobioAPI.dll" DiskId="1" Source="$(var.OutputFilesDir)EnobioAPI.dll" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="Enobio3GAPI" Guid="EAE58772-F4BA-4964-A282-63CBFCA0053D">
+				  <File Id="Enobio3GAPI.dll" Name="Enobio3GAPI.dll" DiskId="1" Source="$(var.OutputFilesDir)Enobio3GAPI.dll" KeyPath="yes"></File>
+				</Component>
+				
+				<Component Id="WinBluetoothAPI" Guid="EE27729C-405E-4D4E-BA62-84F1BC1305EE">
+				  <File Id="WinBluetoothAPI.dll" Name="WinBluetoothAPI.dll" DiskId="1" Source="$(var.OutputFilesDir)WinBluetoothAPI.dll" KeyPath="yes"></File>
+				</Component>
+				
+				<Component Id="QWTDLL" Guid="1942CC16-45B3-4E30-935D-0BAAFD497D8E">
+					<File Id="qwt.dll" Name="qwt$(var.postFix).dll" DiskId="1" Source="$(var.OutputFilesDir)qwt$(var.postFix).dll" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="QTCORE" Guid="1942CC16-45B3-4E30-935D-1BAAFD497D8E">
+					<File Id="QtCore4.dll" Name="QtCore$(var.postFix)4.dll" DiskId="1" Source="$(var.QtBinaryDir)QtCore$(var.postFix)4.dll" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="QTGUI" Guid="1942CC16-45B3-4E30-935D-2BAAFD497D8E">
+					<File Id="QtGui4.dll" Name="QtGui$(var.postFix)4.dll" DiskId="1" Source="$(var.QtBinaryDir)QtGui$(var.postFix)4.dll" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="QTOPENGL" Guid="1942CC16-45B3-4E30-935D-3BAAFD497D8E">
+					<File Id="QtOpenGL4.dll" Name="QtOpenGL$(var.postFix)4.dll" DiskId="1" Source="$(var.QtBinaryDir)QtOpenGL$(var.postFix)4.dll" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="QTSVG" Guid="1942CC16-45B3-4E30-935D-4BAAFD497D8E">
+					<File Id="QtSvg4.dll" Name="QtSvg$(var.postFix)4.dll" DiskId="1" Source="$(var.QtBinaryDir)QtSvg$(var.postFix)4.dll" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="QTWEBKIT" Guid="E97E963A-33D7-43bf-86DE-79FF3DF26178">
+					<File Id="QtWebKit4.dll" Name="QtWebKit$(var.postFix)4.dll" DiskId="1" Source="$(var.QtBinaryDir)QtWebKit$(var.postFix)4.dll" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="QTPHONON" Guid="266FFAB0-8DD2-43a2-93E9-EC81F7915EEF">
+					<File Id="phonon4.dll" Name="phonon$(var.postFix)4.dll" DiskId="1" Source="$(var.QtBinaryDir)phonon$(var.postFix)4.dll" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="QTXML" Guid="31E35C3C-06FE-4284-A94E-4042CF189CDF">
+					<File Id="QtXml4.dll" Name="QtXml$(var.postFix)4.dll" DiskId="1" Source="$(var.QtBinaryDir)QtXml$(var.postFix)4.dll" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="QTNETWORK" Guid="2DF4E163-3F1F-43bb-A188-835177D3F986">
+					<File Id="QtNetwork4.dll" Name="QtNetwork$(var.postFix)4.dll" DiskId="1" Source="$(var.QtBinaryDir)QtNetwork$(var.postFix)4.dll" KeyPath="yes"></File>
+				</Component>
+
+				<Component Id="QTMULTIMEDIAKIT1" Guid="72DEB303-05DD-4D90-A8BB-575ED7AFC4CC">
+					<File Id="QtMultimediaKit1" Name="QtMultimediaKit$(var.postFix)1.dll" DiskId="1" Source="$(var.QtMobilityDir)QtMultimediaKit$(var.postFix)1.dll" KeyPath="yes"></File>
+				</Component>
+
+				<Directory Id="QTPLUGINS" Name="qtPlugins">
+					<Directory Id="IMAGEFORMATS" Name="imageformats">
+						<Component Id="QJPEG4" Guid="1AD88996-5B63-4003-A90C-D71C497B2159">
+							<File Id="qjpeg4" Name="qjpeg$(var.postFix)4.dll" DiskId="1" Source="$(var.QtPluginsDir)imageformats\qjpeg$(var.postFix)4.dll" KeyPath="yes"></File>
+						</Component>
+					</Directory>
+				</Directory>
+
+				<Directory Id="MEDIASERVICE" Name="mediaservice">
+					<Component Id="DSENGINE" Guid="761DFAD8-5ABC-4C0C-9A26-CD653CBCF4FF">
+						<File Id="dsengine.dll" Name="dsengine$(var.postFix).dll" DiskId="1" Source="$(var.QtMobilityDir)mediaservice\dsengine$(var.postFix).dll" KeyPath="yes"></File>
+					</Component>
+
+					<Component Id="QTMEDIA_AUDIOENGINE" Guid="F04915FD-5E2C-4941-A412-D33332D19971">
+						<File Id="qtmedia_audioengine.dll" Name="qtmedia_audioengine$(var.postFix).dll" DiskId="1" Source="$(var.QtMobilityDir)mediaservice\qtmedia_audioengine$(var.postFix).dll" KeyPath="yes"></File>
+					</Component>
+				</Directory>
+
+				<Directory Id="PLUGINS" Name="plugins">
+					<Component Id="SimpleBallGamePlugin" Guid="1942CC16-45B3-4E30-935D-6BAAFD497D8E">
+						<File Id="SimpleBallGamePlugin.dll" Name="SimpleBallGamePlugin$(var.postFix).dll" DiskId="1" Source="$(var.OutputFilesDir)plugins\SimpleBallGamePlugin$(var.postFix).dll" KeyPath="yes"></File>
+						<File Id="SimpleBallGamePlugin.ini" Name="SimpleBallGamePlugin$(var.postFix).ini" DiskId="1" Source="$(var.OutputFilesDir)plugins\SimpleBallGamePlugin.ini"></File>
+					</Component>
+
+					<Component Id="EmptyBallGamePlugin" Guid="1942CC16-45B3-4E30-935D-7BAAFD497D8E">
+						<File Id="EmptyBallGamePlugin.dll" Name="EmptyBallGamePlugin$(var.postFix).dll" DiskId="1" Source="$(var.OutputFilesDir)plugins\EmptyBallGamePlugin$(var.postFix).dll" KeyPath="yes"></File>
+					</Component>
+
+					<Component Id="MediaGamePlugin" Guid="1942CC16-45B3-4E30-935D-ABA69C5D53AC">
+						<File Id="MediaGamePlugin.dll" Name="MediaGamePlugin$(var.postFix).dll" DiskId="1" Source="$(var.OutputFilesDir)plugins\MediaGamePlugin$(var.postFix).dll" KeyPath="yes"></File>
+						<File Id="MediaGamePluginData.ini" Name="MediaGamePluginData.ini" DiskId="1" Source="$(var.OutputFilesDir)plugins\MediaGamePluginData.ini"></File>
+					</Component>
+				</Directory>
+
+				<Directory Id="SCENARIOS" Name="scenarios">
+					<Directory Id="CHANNELS_4" Name="4Channels">
+					</Directory>
+					<Directory Id="CHANNELS_8" Name="8Channels">
+					</Directory>
+				</Directory>
+			</Directory>
+
+			<Component Id="RegistryEntries" Guid="1942CC16-45B3-4E30-935D-9BAAFD497D8F">
+				<RegistryKey Root="HKLM" Key="Software\CENT\Settings">
+					<RegistryValue Type="string" Name="OpenVibeInstallDir" Value="[OVINSTALLDIR]"/>
+				</RegistryKey>
+				<RegistryKey Root="HKLM" Key="Software\CENT\Settings">
+					<RegistryValue Type="string" Name="CentDataDir" Value="[PATIENTSDATADIR]"/>
+				</RegistryKey>
+			</Component>
+
+		</Directory>
+	</Directory>
+
+	<Feature Id="CENTFeature" Title="CENTFeature" Level="1">
+		<!-- Application-->
+		<ComponentRef Id="CENTApplication" />
+		<ComponentRef Id="OpenViBEAcquisitionServerDynamic" />
+		<ComponentRef Id="OpenViBEDesignerDynamic" />
+		<ComponentRef Id="EnobioAPI" />
+		<ComponentRef Id="Enobio3GAPI" />
+		<ComponentRef Id="WinBluetoothAPI" />
+
+		<!-- Plugins  -->
+		<ComponentRef Id="SimpleBallGamePlugin" />
+		<ComponentRef Id="EmptyBallGamePlugin" />
+		<ComponentRef Id="MediaGamePlugin" />
+
+		<!-- Dependecies -->
+		<ComponentRef Id="QWTDLL" />
+		<ComponentRef Id="QTCORE" />
+		<ComponentRef Id="QTGUI" />
+		<ComponentRef Id="QTOPENGL" />
+		<ComponentRef Id="QTSVG" />
+		<ComponentRef Id="QTWEBKIT" />
+		<ComponentRef Id="QTPHONON" />
+		<ComponentRef Id="QTXML" />
+		<ComponentRef Id="QTNETWORK" />
+		<ComponentRef Id="QTMULTIMEDIAKIT1" />
+		<ComponentRef Id="QJPEG4" />
+
+		<!-- Mediaservice -->
+		<ComponentRef Id="DSENGINE" />
+		<ComponentRef Id="QTMEDIA_AUDIOENGINE" />
+
+		<!-- Registry entries -->
+		<ComponentRef Id="RegistryEntries" />
+
+		<!-- Scenarios and gdf files-->
+		<ComponentGroupRef Id="CentScenarios4" />
+		<ComponentGroupRef Id="CentScenarios8" />
+
+		<!-- Tutorial files-->
+		<ComponentGroupRef Id="CentGamesTutorials" />
+	</Feature>
+
+	<!-- Visual C++ Redistributable -->
+	<Feature Id="VCRedist" Title="Visual C++ Runtime" AllowAdvertise="no" Display="hidden" Level="1">
+		<MergeRef Id="VCRedist"/>
+	</Feature>
+
+	<!-- UI Installation -->
+	<Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" ></Property>
+	<Property Id="OVINSTALLDIR" Value="$(var.ProgramFilesDir)\openvibe"></Property>
+	<Property Id="PATIENTSDATADIR" Value="$(env.USERPROFILE)\Documents"></Property>
+	<Property Id="CENT_OV_INSTALLDIR" Value="OVINSTALLDIR" Secure='yes'></Property>
+	<Property Id="CENT_DATA_DIR" Value="PATIENTSDATADIR" Secure='yes'></Property>
+	<UIRef Id="CentWixUI_InstallDir"/>
+
+	</Product>
+
+</Wix>

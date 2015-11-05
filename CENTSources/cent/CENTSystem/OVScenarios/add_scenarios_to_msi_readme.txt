@@ -1,0 +1,1 @@
+just copy a folder with all required scenarios for a grou into release folder. Build job does the rest. App discovers them dynamically.

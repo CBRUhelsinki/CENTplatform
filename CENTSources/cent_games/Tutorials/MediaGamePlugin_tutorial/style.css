@@ -1,0 +1,10 @@
+body {
+	background-image:url('background.png');
+	
+	} 
+	
+#content {
+	width: 300px ;
+	margin-left: auto ;
+	margin-right: auto ;
+}

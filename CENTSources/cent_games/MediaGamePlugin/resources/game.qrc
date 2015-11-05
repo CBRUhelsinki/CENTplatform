@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/MediaGamePlugin">
+        <file alias="background.png">background.png</file>
+    </qresource>
+</RCC>

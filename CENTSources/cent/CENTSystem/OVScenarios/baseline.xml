@@ -1,0 +1,411 @@
+<OpenViBE-Scenario>
+	<Boxes>
+		<Box>
+			<Identifier>(0x00004b99, 0x00004b73)</Identifier>
+			<Name>Acquisition client</Name>
+			<AlgorithmClassIdentifier>(0x35d225cb, 0x3e6e3a5f)</AlgorithmClassIdentifier>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x403488e7, 0x565d70b6)</TypeIdentifier>
+					<Name>Experiment information</Name>
+				</Output>
+				<Output>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Signal strea</Name>
+				</Output>
+				<Output>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Stimulations</Name>
+				</Output>
+				<Output>
+					<TypeIdentifier>(0x013df452, 0xa3a8879a)</TypeIdentifier>
+					<Name>Channel localisation</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
+					<Name>Acquisition server hostname</Name>
+					<DefaultValue>${AcquisitionServer_HostName}</DefaultValue>
+					<Value>${AcquisitionServer_HostName}</Value>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Acquisition server port</Name>
+					<DefaultValue>1024</DefaultValue>
+					<Value>1024</Value>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>32</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
+					<Value>26</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>224</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x0ff4da41, 0xc6a874c2)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xad100179, 0xa3c984ab)</Identifier>
+					<Value>120</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>4</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00004c29, 0x00000a1e)</Identifier>
+			<Name>Analog VRPN Server</Name>
+			<AlgorithmClassIdentifier>(0x0ddc3a7e, 0x6f6e6401)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x544a003e, 0x6dcba5f6)</TypeIdentifier>
+					<Name>Input 1</Name>
+				</Input>
+			</Inputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
+					<Name>Peripheral name</Name>
+					<DefaultValue>openvibe-vrpn</DefaultValue>
+					<Value>liveEEG</Value>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>224</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
+					<Value>39</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>256</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x2f4c9e00, 0x5dc619e4)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xad100179, 0xa3c984ab)</Identifier>
+					<Value>141</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xfba64161, 0x65304e21)</Identifier>
+					<Value></Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00006586, 0x00003b2a)</Identifier>
+			<Name>Button VRPN Server</Name>
+			<AlgorithmClassIdentifier>(0x0e382e6f, 0x5be1f00c)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input 1</Name>
+				</Input>
+			</Inputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
+					<Name>Peripheral name</Name>
+					<DefaultValue>openvibe-vrpn</DefaultValue>
+					<Value>CENTControlStream</Value>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Button 1 ON</Name>
+					<DefaultValue>OVTK_GDF_Feedback_Continuous</DefaultValue>
+					<Value>OVTK_StimulationId_Label_09</Value>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Button 1 OFF</Name>
+					<DefaultValue>OVTK_GDF_End_Of_Trial</DefaultValue>
+					<Value>OVTK_StimulationId_Label_00</Value>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>272</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
+					<Value>39</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>512</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x1473765a, 0x12eb3520)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xad100179, 0xa3c984ab)</Identifier>
+					<Value>140</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>3</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xfba64161, 0x65304e21)</Identifier>
+					<Value></Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x0000700d, 0x00004a93)</Identifier>
+			<Name>GDF file writer</Name>
+			<AlgorithmClassIdentifier>(0x1e7b2155, 0x107289ce)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x403488e7, 0x565d70b6)</TypeIdentifier>
+					<Name>Experiment information</Name>
+				</Input>
+				<Input>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Signal</Name>
+				</Input>
+				<Input>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Stimulation</Name>
+				</Input>
+			</Inputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Filename</Name>
+					<DefaultValue>record-[$core{date}-$core{time}].gdf</DefaultValue>
+					<Value>record-[$core{date}-$core{time}].gdf</Value>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>224</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
+					<Value>26</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>128</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0xd41e3037, 0xcc12644a)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x8d21ff41, 0xdf6afe7e)</Identifier>
+					<Value>$env{CENT_GDF_CONF}\\BaselineGdf.xml</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xad100179, 0xa3c984ab)</Identifier>
+					<Value>100</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc67a01dc, 0x28ce06c1)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>3</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+	</Boxes>
+	<Links>
+		<Link>
+			<Identifier>(0x0000014f, 0x00002238)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b99, 0x00004b73)</BoxIdentifier>
+				<BoxOutputIndex>1</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000700d, 0x00004a93)</BoxIdentifier>
+				<BoxInputIndex>1</BoxInputIndex>
+			</Target>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1b32c44c, 0x1905e0e9)</Identifier>
+					<Value>51</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x358ae8b5, 0x0f8bacd1)</Identifier>
+					<Value>216</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x3f0a3b27, 0x570913d2)</Identifier>
+					<Value>206</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
+					<Value>128</Value>
+				</Attribute>
+			</Attributes>
+		</Link>
+		<Link>
+			<Identifier>(0x00002bb8, 0x00001db6)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b99, 0x00004b73)</BoxIdentifier>
+				<BoxOutputIndex>2</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000700d, 0x00004a93)</BoxIdentifier>
+				<BoxInputIndex>2</BoxInputIndex>
+			</Target>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1b32c44c, 0x1905e0e9)</Identifier>
+					<Value>51</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x358ae8b5, 0x0f8bacd1)</Identifier>
+					<Value>231</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x3f0a3b27, 0x570913d2)</Identifier>
+					<Value>206</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
+					<Value>143</Value>
+				</Attribute>
+			</Attributes>
+		</Link>
+		<Link>
+			<Identifier>(0x000048db, 0x00006875)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b99, 0x00004b73)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000700d, 0x00004a93)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1b32c44c, 0x1905e0e9)</Identifier>
+					<Value>51</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x358ae8b5, 0x0f8bacd1)</Identifier>
+					<Value>201</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x3f0a3b27, 0x570913d2)</Identifier>
+					<Value>206</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
+					<Value>113</Value>
+				</Attribute>
+			</Attributes>
+		</Link>
+		<Link>
+			<Identifier>(0x0000561c, 0x00002bfb)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b99, 0x00004b73)</BoxIdentifier>
+				<BoxOutputIndex>1</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004c29, 0x00000a1e)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1b32c44c, 0x1905e0e9)</Identifier>
+					<Value>51</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x358ae8b5, 0x0f8bacd1)</Identifier>
+					<Value>216</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x3f0a3b27, 0x570913d2)</Identifier>
+					<Value>200</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
+					<Value>256</Value>
+				</Attribute>
+			</Attributes>
+		</Link>
+	</Links>
+	<Comments></Comments>
+	<VisualisationTree>
+		<VisualisationWidget>
+			<Identifier>(0x000062b0, 0x00002f95)</Identifier>
+			<Name>Default window</Name>
+			<Type>1</Type>
+			<ParentIdentifier>(0xffffffff, 0xffffffff)</ParentIdentifier>
+			<BoxIdentifier>(0xffffffff, 0xffffffff)</BoxIdentifier>
+			<NumChildren>1</NumChildren>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x4c90d4ad, 0x7a2554ec)</Identifier>
+					<Value>320</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x7b814cca, 0x271df6dd)</Identifier>
+					<Value>480</Value>
+				</Attribute>
+			</Attributes>
+		</VisualisationWidget>
+		<VisualisationWidget>
+			<Identifier>(0x00006f57, 0x00000ef5)</Identifier>
+			<Name>Default tab</Name>
+			<Type>2</Type>
+			<ParentIdentifier>(0x000062b0, 0x00002f95)</ParentIdentifier>
+			<Index>0</Index>
+			<BoxIdentifier>(0xffffffff, 0xffffffff)</BoxIdentifier>
+			<NumChildren>1</NumChildren>
+		</VisualisationWidget>
+		<VisualisationWidget>
+			<Identifier>(0x00005cdf, 0x00005080)</Identifier>
+			<Name>Empty</Name>
+			<Type>0</Type>
+			<ParentIdentifier>(0x00006f57, 0x00000ef5)</ParentIdentifier>
+			<Index>0</Index>
+			<BoxIdentifier>(0xffffffff, 0xffffffff)</BoxIdentifier>
+			<NumChildren>0</NumChildren>
+		</VisualisationWidget>
+	</VisualisationTree>
+</OpenViBE-Scenario>

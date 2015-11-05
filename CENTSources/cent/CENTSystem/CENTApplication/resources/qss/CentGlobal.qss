@@ -1,0 +1,293 @@
+QLabel, QPushButton, QCheckBox, QComboBox
+{
+	font: 14px;
+}
+
+GameSelectPage QWidget#GameSelectorWidget, 
+GameSelectPage, 
+GameSelectPage QScrollArea,
+ICentPage QTextEdit,
+ICentPage
+{
+	background-color: transparent;
+	border: none;
+}
+
+SimplePage#BaselinePatientPageName
+{
+	background-color: white;
+}
+
+QMainWindow
+{
+	background-image: url(":/images/Global/backgroundPattern.png");
+}
+
+QWidget#CentSettingsWidget
+{
+	background-image: url(":/images/Global/backgroundPattern.png");
+}
+
+QWidget#CentAboutWidget
+{
+	background-image: url(":/images/Global/backgroundPattern.png");
+	qproperty-wordWrap: true;
+}
+
+QMainWindow QWidget#centralWidget QLabel#headerLabel
+{
+	background-color: #656565;
+	color: #EAEAEA;
+	font: bold 16px;
+	text-align: left;
+	padding: 8;
+}
+
+QWidget#NameSurnameInfoWidget QLabel#imageLabel
+{
+	min-width: 260px;
+	min-height: 196px;
+	background-image: url(:/images/PatientUI/imageUser.png);
+	margin-left: 40px;
+}
+
+QWidget#SleepInfoWidget QLabel#imageLabel
+{
+	min-width: 260px;
+	min-height: 196px;
+	background-image: url(:/images/PatientUI/imageSleep.png);
+	margin-left: 40px;
+}
+
+QPushButton
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+QLineEdit, QSpinBox, QDoubleSpinBox
+{
+	border: 1px solid gray;
+	border-radius: 4px;
+	font: 14px;
+	padding-left: 5px;
+	padding-right: 2px;
+}
+
+QWidget#NameSurnameInfoWidget QLineEdit,
+QWidget#SleepInfoWidget QSpinBox
+{
+	min-width: 360px;
+	min-height: 35px;
+}
+
+QWidget#NameSurnameInfoWidget QLabel,
+QWidget#SleepInfoWidget QLabel
+{
+	margin-top: 10px;
+}
+
+QWidget[FooterButtonWidget=true]
+{
+	margin-left: 0px;
+	padding: 0px;
+	spacing: 0px;
+	min-height: 60px;
+	max-height: 60px;
+	background-color: rgba(200, 200, 200, 70);
+}
+
+QWidget[FooterButtonWidget=true] QPushButton
+{
+	min-width: 80px;
+}
+
+BaselineInfoPage QLabel#BetaLevelLabel,
+BaselineInfoPage QLabel#ThetaLevelLabel
+{
+	font: bold 16px;
+}
+
+ChooseScenarioGroupPage QComboBox
+{
+	padding: 10px;
+	min-width: 120px;
+}
+
+SimplePage#WelcomePage,
+SimplePage#FinishPage
+{
+	margin: 0px;
+	min-height: 100px;
+	padding: 0px;
+	border-image: url(:/images/Global/defaultSplashScreen.png);
+}
+
+SimplePage#WelcomePage QWidget[FooterButtonWidget=true],
+SimplePage#FinishPage QWidget[FooterButtonWidget=true]
+{
+	min-height: 100px;
+	max-height: 100px;
+	background-color: rgba(50, 50, 50, 150);
+}
+
+SimplePage#WelcomePage QWidget[FooterButtonWidget=true] QLabel,
+SimplePage#FinishPage QWidget[FooterButtonWidget=true] QLabel
+{
+	font: 24px;
+	color: white;
+	margin-left: 10px;
+}
+
+SimplePage#WelcomePage QWidget[FooterButtonWidget=true] QPushButton,
+SimplePage#FinishPage QWidget[FooterButtonWidget=true] QPushButton
+{
+	max-height: 30px;
+	min-height: 30px;
+	min-width: 120px;
+	font: 16px;
+	margin-right: 20px;
+}
+
+MultiButtonWidgetBase QPushButton
+{
+	background-color: rgba(200, 200, 200, 150);
+	border-radius: 4px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+QPushButton[isInButtonsGroup=true]:hover:!checked
+{
+	background-color: #3cb12f;
+}
+
+QPushButton[isInButtonsGroup=true]:checked
+{
+	background-color: #949494;
+}
+
+QWidget#GameElementWidget
+{
+	border: 3px solid gray;
+	border-radius: 20px;
+	background: white;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+QWidget[FooterButtonWidget=true]
+{
+	margin-top: 6px;
+}
+
+QPushButton#MoodButton_1:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood01_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_1:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood01_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_1:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood01_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MoodButton_2:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood02_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_2:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood02_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_2:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood02_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MoodButton_3:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood03_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_3:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood03_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_3:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood03_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MoodButton_4:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood04_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_4:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood04_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_4:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood04_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MoodButton_5:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood05_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_5:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood05_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_5:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood05_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MoodButton_6:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood06_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_6:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood06_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_6:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood06_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MoodButton_7:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood07_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_7:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood07_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_7:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood07_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MoodButton_8:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood08_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_8:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood08_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_8:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood08_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MoodButton_9:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood09_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_9:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood09_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MoodButton_9:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_mood09_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MotivationButton_1:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation01_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_1:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation01_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_1:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation01_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MotivationButton_2:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation02_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_2:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation02_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_2:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation02_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MotivationButton_3:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation03_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_3:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation03_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_3:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation03_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MotivationButton_4:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation04_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_4:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation04_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_4:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation04_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MotivationButton_5:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation05_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_5:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation05_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_5:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation05_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MotivationButton_6:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation06_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_6:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation06_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_6:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation06_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MotivationButton_7:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation07_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_7:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation07_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_7:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation07_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MotivationButton_8:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation08_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_8:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation08_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_8:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation08_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#MotivationButton_9:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation09_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_9:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation09_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#MotivationButton_9:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_motivation09_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#ExcitementButton_1:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited01_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_1:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited01_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_1:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited01_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#ExcitementButton_2:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited02_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_2:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited02_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_2:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited02_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#ExcitementButton_3:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited03_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_3:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited03_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_3:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited03_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#ExcitementButton_4:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited04_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_4:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited04_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_4:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited04_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#ExcitementButton_5:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited05_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_5:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited05_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_5:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited05_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#ExcitementButton_6:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited06_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_6:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited06_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_6:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited06_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#ExcitementButton_7:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited07_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_7:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited07_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_7:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited07_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#ExcitementButton_8:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited08_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_8:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited08_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_8:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited08_pressed.png) 4 4 4 4 stretch stretch;}
+
+QPushButton#ExcitementButton_9:!checked:!hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited09_normal.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_9:!checked:hover { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited09_hover.png) 4 4 4 4 stretch stretch;}
+QPushButton#ExcitementButton_9:checked { border-width: 4px; border-image: url(:/images/PatientUI/bgnd_excited09_pressed.png) 4 4 4 4 stretch stretch;}

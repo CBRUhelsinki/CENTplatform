@@ -1,0 +1,20 @@
+CENT Application copyright (c) 2011-2012 BLStream Ltd.<br>
+All rights reserved by University of Helsinki, Cognitive Brain Reasearch Unit, please contact through <a href='http://www.cbru.helsinki.fi'>http://www.cbru.helsinki.fi</a><br>
+<br>
+Pieces:<br>
+OpenViBE is released under the GNU Lesser General Public License v2.1 (LGPL v2.1).<br>
+All modifications to OpenViBE are made public and are available here:<br>
+git://github.com/blstream/cent-openvibe-public.git<br>
+For full license information please see <a href='http://openvibe.inria.fr/license'>http://openvibe.inria.fr/license/</a><br>
+<br>
+The Virtual Reality Peripheral Network (VRPN) copyright (c) 1998-2012 The CISMM project at the University of North Carolina at Chapel Hill, supported by NIH/NCRR and NIH/NIBIB award #2P41EB002025, licensed under Boost Software License 1.0.<br>
+For full license information please see <a href='http://www.boost.org/LICENSE_1_0.txt'>http://www.boost.org/LICENSE_1_0.txt.</a><br>
+<br>
+Qt GUI Toolkit copyright (c) 2008-2012 Nokia Corporation and/or its subsidiary(-ies), licensed under LGPL2.1 license.<br>
+For full license information please see <a href='http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html'>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.</a><br>
+<br>
+Qwt library licensed under Qwt License Version 1.0.<br>
+For full license information please see <a href='http://qwt.sourceforge.net/qwtlicense.html'>http://qwt.sourceforge.net/qwtlicense.html</a><br>
+<br>
+EnobioAPI.dll propriatary driver for Enobio device copyright (c) 2011.<br>
+For license information please contact starlab at info@starlab.com<br>

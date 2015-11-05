@@ -1,0 +1,6 @@
+[submodule "OpenVibe"]
+	path = OpenVibe
+	url = git+ssh://git.blstream.net/project/cent_openvibe.git
+[submodule "CENTSystem/SDK"]
+	path = CENTSystem/SDK
+	url = git+ssh://git.blstream.net/project/cent_sdk.git
