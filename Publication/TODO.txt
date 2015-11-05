@@ -1,5 +1,5 @@
 CENTExtra
-	GameTutotial
+	GameTutorial
 	IAF Calculator Python Standalone
 		TODO::Documentation
 	Patient History Detailed Plots
