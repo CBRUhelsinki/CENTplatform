@@ -1,0 +1,66 @@
+\subsection{Neurofeedback software}
+Currently a large number of different neurofeedback software packages exist, most of which are still actively used or still in development. The recent boom of wearable biosensors (such as cheap, commercial EEG devices like the Muse and Melon headbands) has also boosted the number of available personal neurofeedback applications. Despite the popularity, very little literature reviewing neurofeedback platforms exists. The attempt is a report estimating the usefulness of various BCI frameworks for conducting neurofeedback and listing design considerations for such a system  \cite{huster2014brain}. In this section we attempt to comprehensively cover different types of software packages are available for neurofeedback.
+
+All available neurofeedback solutions share three basic characteristics which are: 1. a method of interfacing with an EEG device, 2. capability to process the acquired EEG data in real-time and 3. the ability to generate feedback for the user. Outside these parameters different software packages can have vastly different properties. For instance supported devices, licensing and inteded usage varies greatly between different neurofeedback solutions. The neurofeedback software can roughly be divided into two categories: clinical and non-clinical. The clinical category contains software that is solely intended for various neurofeedback therapies (ADHD therapy being the most common). The other software packages are aimed more for personal cognitive neuromodulation and entrainment (such as mediation and stress management). We have compiled a list (table \ref{nfbsoftware}) which, to our knowledge, contains all of the currently available software packages intended for neurofeedback. 
+
+The list in table \ref{nfbsoftware} contains 33 neurofeedback software, their respective licenses and other information. The license column indicates which license was used when the software was published. It is also possible that a software package was released with the source code but without a specified license. In these cases the license is represented by a question mark. We included the last updated value to indicate the last time the software was updated or information related to the software was published. This value is intended to represent whether the each software project is still in active development or if development has been halted. Most of the software packages have received updates in the last five years but two projects (EEGMIR and BrainAthlon \cite{palke2004brainathlon}) have been dormant for over a decade. The scientific merit refers to the highest ranking publication the corresponding software was used in. The rankings were extracted from Publication Forum which is a quality assesment forum for publication channels. Various journals are ranked according to values ranging from 0 (no rank) to 3 (mentioned in a top journal) \footnote{More information regarding the rankings used can be found \url{http://www.julkaisufoorumi.fi/en}}. This value indicates whether or not the software has been used in neurofeedback related research. For instance the BioExplorer software has been used to study the increase local gamma and beta band activity through neurofeedback \cite{keizer2010enhancing} and the EEGer4 to study the effect of music on alpha/theta neurofeedback \cite{gruzelier2014replication}. Finally the use case for each software (clincal vs non-clincal) is also listed in the table. The use case was determined solely based on the software description which was obtained from the webpage of the software.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrc}
+System & License & JUFO & Last Update & Clinical use \\       
+\hline
+BioEra & Prop. & 1 & 2015-06-22 & No \\   
+BrainBay & GPL & 1 & 2014-12-03 & No \\   
+BrainAthlon & ? & 1 & 2004-01-01 & No \\   
+EEGMIR & ? & 0 & 2003-12-30 & No \\   
+ElectricGuru & ? & 0 & 2002-01-21 & No \\   
+BioExplorer & Prop. & 2 & 2012-09-26 & No \\  
+BioGraph Infiniti & Prop. & 1 & 2013-06-05 & Yes \\
+BioTrace+ & Prop. & 2 & 2015-07-23 & Yes \\
+BrainFeedbackPro & Prop. & 0 & 2015-11-19 & Yes \\
+TruScan Neurofeedback & Prop. & 0 & 2015-11-19 & Yes \\
+BrainMaster & Prop. & 1 & 2015-10-09 & Yes \\
+BrainPaint & Prop. & 2 & 2012-01-01 & Yes \\
+Cygnet & Prop. & 1 & 2015-11-01 & Yes \\
+eBioo & Prop. & 0 & 2015-03-01 & Yes \\
+EEGer4 & Prop. & 2 & 2013-06-10 & Yes \\
+EventIDE & Prop. & 0 & 2015-08-18 & No \\
+Mind Workstation & Prop. & 0 & 2011-08-31 & Yes \\
+MindReflector & Prop. & 0 & 2013-09-19 & Yes \\
+Neurofield & Prop. & 1 & 2015-02-06 & Yes \\
+neuromore Studio & Prop. & 0 & 2015-11-06 & No \\
+NeurOptimal & Prop. & 0 & 2015-07-01 & Yes \\
+NeuroRT & Prop. & 0 & 2015-11-04 & Yes \\
+OpenViBE & AGPL & 1 & 2015-10-02 & No \\
+SmartMind3 & Prop. & 1 & 2015-01-01 & Yes \\
+Melon - Brain Training & Prop. & 0 & 2015-02-28 & No \\
+Muse App & Prop. & 0 & 2015-12-16 & No \\
+Neurosurfer & Prop. & 0 & 2015-02-15 & Yes \\
+BrainWaveOSC & ? & 0 & 2014-07-30 & No \\
+OpenNFB & GPL & 0 & 2015-11-19 & No \\
+WaveTuner & ? & 0 & 2013-10-16 & No \\
+AlphaTrainer & ? & 0 & 2014-05-20 & No \\
+Mindrun & MIT & 0 & 2015-09-29 & N\\
+Resonanz & GPL & 0 & 2015-07-23 & No \\
+\end{tabular}
+    \caption{Currently available neurofeedback software packages}\label{nfbsoftware}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcc}
+& Non-clinical  & Clinical \\       
+Proprietary & 6 & 15 \\
+Open-source  & 11 & 0 \\
+\end{tabular}
+    \caption{Division of use case and license in neurofeedback software packages}\label{nfbsummary}
+\end{table}
+
+Looking at the table \ref{nfbsoftware} it is pretty clear that the vast majority of the software are commercial with  proprietary licenses. The division between clincal use and non-clinical use is roughly even, however, all of the software intended for clincal use have a properietary license. The comparison of license (open-source vs. proprietary) and intended use (clinical vs non-clinical) has been summarized in table \ref{nfbsummary}. From table \ref{nfbsummary} it is apparent that there is a clear lack for open-source solutions for clinical neurofeedback. The closest option for such a platform would be NeuroRT suite by Mensia Technologies, which like the CENT system, is built on top of the open-source OpenViBE platform. There is, however, no truly open-source neurofeedback software for clincal use that would cover both the signal processing back-end and the patient management front-end. By having also the front-end of the software package open-source improves the availability and configurability of the neurofeedback software for clincal professionals wishing to get involved in neurofeedback therapy.
+
+
+\subsection{Wearable EEG sensors} % This section could go to discussion maybe?
+In the past few years there has been a noticable increase in the availability of ambulatory EEG sensors. This is most likely due to the popularity of the quantified self movement, in which measurement of various phsyiological signals plays a key role. As a result, multiple devices have risen through crowd-funded channels and are now available for purchase. The quality of these devices varies from purely consumer-grade (also known as lifestyle applications) to more expensive but near laboratory-grade devices. The suitability of these devices for neurofeedback therapy remains to be tested but the current trend looks promising as the devices are readily available and cheap compared to laboratory EEG. 
+
+The standard software that usually accompanies these devices seems to be more oriented for self quantification and cognitive enhancement. For instance the application intended for the MUSE band teaches meditation techniques. This is not surprising as the devices are targeted for people intrested in quantified self movement. Devices like the MUSE, however, provide a communication protocol that allows other software to access the raw data of the device. Therefore, it is plausible that these devices can be used as an input to neurofeedback software. The modification necessary would require that neurofeedback software itself could be modified which further increases the need for open source solutions.

@@ -1,6 +1,7 @@
 \documentclass[fleqn,10pt]{wlpeerj}
 
 \usepackage{todonotes}
+\usepackage{url}
 
 \graphicspath{{./figs/}}
 
@@ -115,7 +116,7 @@ Nova Tech!
 Vilistus
 %http://www.vilistus.com/software.shtml
 
-
+\input{nfb_software_review}
 % some solution
 \subsection{CENT platform}
 
@@ -137,6 +138,7 @@ The CENT platform was designed to connect light-weight EEG amplifiers to a simpl
 
 
 \section{Methods - Architecture}
+\input{signal_processing}
 % platform technology
 \todo[inline]{platform technology}
 The CENT platform is built on Qt…
@@ -271,6 +273,6 @@ You can make lists with automatic numbering \dots
 We hope you find write\LaTeX\ useful for your PeerJ submission, and please let us know if you have any feedback. Further examples with dummy text are included in the following pages.
 
 
-\bibliography{CENTrefs}
+\bibliography{CENTrefs,nfb_software_review, signal_processing}
 
 \end{document}
