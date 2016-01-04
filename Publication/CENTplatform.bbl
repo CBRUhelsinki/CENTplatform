@@ -1,9 +1,103 @@
 \begin{thebibliography}{}
 
-\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-Figueredo, A.~J. and Wolf, P. S.~A. (2009).
-\newblock Assortative pairing and life history strategy - a cross-cultural
-  study.
-\newblock {\em Human Nature}, 20:317--330.
+\bibitem[Arns et~al., 2014]{Arns2014}
+Arns, M., Feddema, I., and Kenemans, J.~L. (2014).
+\newblock {Differential effects of theta/beta and SMR neurofeedback in ADHD on
+  sleep onset latency.}
+\newblock {\em Frontiers in human neuroscience}, 8:1019.
+
+\bibitem[Babiloni et~al., 2010]{babiloni2010reactivity}
+Babiloni, C., Lizio, R., Vecchio, F., Frisoni, G.~B., Pievani, M., Geroldi, C.,
+  Claudia, F., Ferri, R., Lanuzza, B., and Rossini, P.~M. (2010).
+\newblock Reactivity of cortical alpha rhythms to eye opening in mild cognitive
+  impairment and alzheimer's disease: an eeg study.
+\newblock {\em Journal of Alzheimer's Disease}, 22(4):1047.
+
+\bibitem[Barry et~al., 2003]{Barry2003}
+Barry, R., Clarke, A., and Johnstone, S. (2003).
+\newblock {A review of electrophysiology in attention-deficit/hyperactivity
+  disorder: I. Qualitative and quantitative electroencephalography}.
+\newblock {\em Clinical Neurophysiology}, 114(2):171--183.
+
+\bibitem[Calderon and Thompson, 2004]{Calderon2004}
+Calderon, K.~S. and Thompson, W.~W. (2004).
+\newblock {Biofeedback relaxation training: A rediscovered mind-body tool in
+  public health}.
+\newblock {\em American Journal of Health Studies}, 19(4):185--194.
+
+\bibitem[Gevensleben et~al., 2014]{Gevensleben2014}
+Gevensleben, H., Moll, G.~H., Rothenberger, A., and Heinrich, H. (2014).
+\newblock {Neurofeedback in attention-deficit/hyperactivity disorder -
+  different models, different ways of application.}
+\newblock {\em Frontiers in human neuroscience}, 8:846.
+
+\bibitem[Gruzelier et~al., 2014]{gruzelier2014replication}
+Gruzelier, J.~H., Holmes, P., Hirst, L., Bulpin, K., Rahman, S., Van~Run, C.,
+  and Leach, J. (2014).
+\newblock Replication of elite music performance enhancement following
+  alpha/theta neurofeedback and application to novice performance and
+  improvisation with smr benefits.
+\newblock {\em Biological psychology}, 95:96--107.
+
+\bibitem[Hammond, 2010]{Hammond2010}
+Hammond, D.~C. (2010).
+\newblock {The need for individualization in neurofeedback: heterogeneity in
+  QEEG patterns associated with diagnoses and symptoms.}
+\newblock {\em Applied psychophysiology and biofeedback}, 35(1):31--6.
+
+\bibitem[Huster et~al., 2014]{huster2014brain}
+Huster, R.~J., Mokom, Z.~N., Enriquez-Geppert, S., and Herrmann, C.~S. (2014).
+\newblock Brain--computer interfaces for eeg neurofeedback: Peculiarities and
+  solutions.
+\newblock {\em International Journal of Psychophysiology}, 91(1):36--45.
+
+\bibitem[Johnstone et~al., 2005]{Johnstone2005}
+Johnstone, J., Gunkelman, J., and Lunt, J. (2005).
+\newblock {Clinical database development: characterization of EEG phenotypes.}
+\newblock {\em Clinical EEG and neuroscience}, 36(2):99--107.
+
+\bibitem[Keizer et~al., 2010]{keizer2010enhancing}
+Keizer, A.~W., Verment, R.~S., and Hommel, B. (2010).
+\newblock Enhancing cognitive control through neurofeedback: A role of
+  gamma-band activity in managing episodic retrieval.
+\newblock {\em Neuroimage}, 49(4):3404--3413.
+
+\bibitem[Klimesch, 1999]{klimesch1999eeg}
+Klimesch, W. (1999).
+\newblock Eeg alpha and theta oscillations reflect cognitive and memory
+  performance: a review and analysis.
+\newblock {\em Brain research reviews}, 29(2):169--195.
+
+\bibitem[Lubar and Shouse, 1976]{Lubar1976}
+Lubar, J.~F. and Shouse, M.~N. (1976).
+\newblock {EEG and behavioral changes in a hyperkinetic child concurrent with
+  training of the sensorimotor rhythm (SMR): a preliminary report.}
+\newblock {\em Biofeedback and self-regulation}, 1(3):293--306.
+
+\bibitem[Mayer et~al., 2015]{Mayer2015}
+Mayer, K., Wyckoff, S.~N., and Strehl, U. (2015).
+\newblock {Underarousal in Adult ADHD: How Are Peripheral and Cortical Arousal
+  Related?}
+\newblock {\em Clinical EEG and neuroscience}, 46(4).
+
+\bibitem[Palke, 2004]{palke2004brainathlon}
+Palke, A. (2004).
+\newblock {\em Brainathlon: Enhancing brainwave control through
+  brain-controlled game play}.
+\newblock PhD thesis, Master’s thesis, Mills College.
+
+\bibitem[Renard et~al., 2010]{renard2010openvibe}
+Renard, Y., Lotte, F., Gibert, G., Congedo, M., Maby, E., Delannoy, V.,
+  Bertrand, O., and L{\'e}cuyer, A. (2010).
+\newblock Openvibe: an open-source software platform to design, test, and use
+  brain-computer interfaces in real and virtual environments.
+\newblock {\em Presence: teleoperators and virtual environments}, 19(1):35--53.
+
+\bibitem[Vernon et~al., 2003]{Vernon2003}
+Vernon, D., Egner, T., Cooper, N., Compton, T., Neilands, C., Sheri, A., and
+  Gruzelier, J. (2003).
+\newblock {The effect of training distinct neurofeedback protocols on aspects
+  of cognitive performance}.
+\newblock {\em International Journal of Psychophysiology}, 47(1):75--85.
 
 \end{thebibliography}

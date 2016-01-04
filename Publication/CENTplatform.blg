@@ -3,44 +3,48 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: CENTplatform.aux
 The style file: apalike.bst
 Database file #1: CENTrefs.bib
-You've used 1 entry,
+Database file #2: nfb_software_review.bib
+Database file #3: signal_processing.bib
+Warning--I didn't find a database entry for "Figueredo:2009dg"
+You've used 16 entries,
             1935 wiz_defined-function locations,
-            479 strings with 3847 characters,
-and the built_in function-call counts, 406 in all, are:
-= -- 39
-> -- 13
-< -- 1
-+ -- 4
-- -- 4
-* -- 33
-:= -- 74
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 7
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 14
-empty$ -- 30
-format.name$ -- 7
-if$ -- 79
+            582 strings with 7485 characters,
+and the built_in function-call counts, 6906 in all, are:
+= -- 662
+> -- 355
+< -- 5
++ -- 124
+- -- 124
+* -- 652
+:= -- 1235
+add.period$ -- 48
+call.type$ -- 16
+change.case$ -- 141
+chr.to.int$ -- 16
+cite$ -- 16
+duplicate$ -- 221
+empty$ -- 437
+format.name$ -- 144
+if$ -- 1296
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 3
-pop$ -- 4
+missing$ -- 15
+newline$ -- 83
+num.names$ -- 48
+pop$ -- 106
 preamble$ -- 1
-purify$ -- 7
+purify$ -- 142
 quote$ -- 0
-skip$ -- 12
+skip$ -- 166
 stack$ -- 0
-substring$ -- 33
-swap$ -- 1
+substring$ -- 473
+swap$ -- 16
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
+type$ -- 96
 warning$ -- 0
-while$ -- 3
+while$ -- 57
 width$ -- 0
-write$ -- 15
+write$ -- 210
+(There was 1 warning)

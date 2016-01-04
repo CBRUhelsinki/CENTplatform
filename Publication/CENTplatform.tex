@@ -16,7 +16,7 @@
 \keywords{neurofeedback, electroencephalography, ADHD, computer-enabled, Qt}
 
 \begin{abstract}
-%TODO temporary short abstract...update after writing
+
 Biofeedback/neurofeedback is a growing clinical field. Tools for administering feedback treatment tend to be proprietary and fixed/non-extensible. Thus there is a need for a biofeedback platform which is entirely open source, extensible and free. We present the Computer Enabled Neuroplasticity Treatment (CENT) platform to meet this need.
 
 \end{abstract}
@@ -81,48 +81,83 @@ Story/structure is:
 \section{Introduction}
 
 % some motivation
-Neurofeedback/Biofeedback (NFB) is a growing field, with extensive clinical use, a large body of research literature, and applications also in performance enhancement, entertainment, and stress relief. 
-
-Tools for administering feedback treatment tend to be proprietary and fixed/non-extensible. Thus there is a need for a biofeedback platform which is entirely open source, extensible and free. We present the Computer Enabled Neuroplasticity Treatment (CENT) platform to meet this need.
+Neurofeedback (NFB) is a growing field, with extensive clinical use, a large body of research literature, and applications also in performance enhancement, entertainment, and stress relief. However tools for administering feedback treatment tend to be proprietary and fixed/non-extensible. Thus there is a need for a biofeedback platform which is both robust, and entirely open source, extensible and free. We present the Computer Enabled Neuroplasticity Treatment (CENT) platform to meet this need.
 
 
 
 
 % some background
 \subsection{Background}
-\todo[inline,author=Ben]{describe Neurofeedback background…}
+NFB, also called electroencephalography (EEG) biofeedback, is operant conditioning of specific temporal, spatial and frequency features extracted from scalp-recorded electrical potentials \citep{Lubar1976}.
 
-Competition / state of the art…
-Random studies
-%http://musaelab.ca/pdfs/C90A.pdf
-%http://europepmc.org/abstract/med/25882342
-%http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4311636/
-%http://www.sciencedirect.com/science/article/pii/S016787601300247X
-
-paid professional products
-% http://bio-medical.com/products/software.html?dir=asc&order=price
-Neuroelectrics Neurosurfer 'VR' environment
+NFB has been described as “a mechanism that may be used to stimulate and/or regulate cerebral activity, which in turn may influence cognitive processing” \citep{Vernon2003}. The specific model of effect has been described variously as ‘repairing’ a presumed cause of disorder to ‘normalise’ behaviour, or instead as a tool to enhance cognitive states (see \cite{Gevensleben2014} for a thorough discussion). Either model can be applied in a clinical setting, while the latter enhancement model could also be applied in any non-clinical setting.
 
 
-23 repos (maybe 2 or 3 decent-looking ones)
-%https://github.com/search?p=1&q=neurofeedback&type=Repositories&utf8=%E2%9C%93
+%NFB personalisation, qEEG databases
+Part of its value is that NFB can be personalized to suit the specific clinical presentation, or performance enhancement requirements, provided that there is requisite theoretical and observational data to guide the personalisation. In clinical settings, the personalisation is often done by reference to quantitative or 'qEEG'-guided normative databases. \cite{Hammond2010} discusses this in detail, illustrating the heterogeneity in qEEG patterns associated with symptoms and discussing the requirements and need for qEEG analysis guided by normative databases. \cite{Johnstone2005} provided a review of such databases, along with a review of qEEG profiles, which are “manifestations seen between genome and behaviour” that they term ‘intermediate’ EEG endophenotypes.
 
-helpful wikipedia page - lists 6 open or GPL warez, inc OpenVIBE
-%https://en.wikipedia.org/wiki/Comparison_of_neurofeedback_software
 
-Free software for specific hardware:
-Nova Tech!
-%http://www.novatecheeg.com/downloads.html
-Vilistus
-%http://www.vilistus.com/software.shtml
+%psychology of NFB
+Beside the neurophysiological aspects of NFB, the psychology and experience of NFB are considered by many to be equally important. \cite{Calderon2004} have conceptualized biofeedback as a three-step process that consists of 
 
+\begin{itemize}
+	\item becoming aware of a physiological response, 
+	\item learning to control the response, and 
+	\item transferring control of the response to everyday life.
+\end{itemize}
+
+The first two steps of the model - becoming aware and learning to control the electrical activity of the brain - constitute NFB learning. The third step refers to transfer of the NFB learning, often measured in the literature by performance on a neurocognitive test of the treated function (e.g. attention) and/or self-reported symptoms.
+
+
+%NFB protocols
+Two of the more widely-used clinical NFB protocols are ‘theta-beta’ (TB) and ‘sensorimotor rhythm’ (SMR), which are those currently supported in the CENT platform. TB and SMR protocols are based on sub-second frequency-band features.
+
+TB protocol assumes a model where theta power is elevated above normal, and therefore uses an inhibition target for theta power and a reinforcement target for beta power. EEG recording is often at a frontal site. The rationale behind TB training has been described in at least two different ways: as the rectification of cortical hypoarousal \citep{Barry2003}, and as the reinforcement of working memory \citep{Vernon2003}.
+
+SMR protocol reinforces beta power, usually low or mid beta, often with an inhibition target for theta. The site is above the sensorimotor strip, often lateral, such that the beta oscillations correspond to the sensorimotor rhythm. The rationale for SMR training has been proposed as either facilitating attention \citep{Vernon2003}, or the improvement of sleep through an increase in beta spindles, with concomitant effects on cognitive function \citep{Arns2014}.
+
+These protocols contrast with another widely-studied protocol, Slow Cortical Potentials (SCP) training, which feeds back the time domain DC component. SCP targets the Contingent Negative Variation (CNV) Event Related Potential, which \cite{Mayer2015} defined as “a slow negative shift over central sites that develops following the presentation of warning stimulus in expectancy of an imperative stimulus that requires a response”. SCP uses two opposed cortical regulation targets to be trained in random consecutive order. The TB and SMR protocols do not include such an explicit set of counter-poised targets to induce self-regulation, relying instead on a single target of reinforcement/inhibition, which is trained repeatedly. \\
+\\
+
+%more depth to problem statement
+The field of NFB makes progress, but in technical terms it does so slowly. The protocols introduced by \cite{Lubar1976} and others have remained unchanged for 40 years. As with any technology, progress relies not just on research, but also on adoption and exploration of the potential by developers. Rapid advances have recently been made in EEG-amplifier hardware and signal processing software, yet the software needed to facilitate open and rapid research and development in clinical NFB is lacking (see below). Opening the field calls for software which is robust, and entirely open source, extensible and free.
+
+
+
+% NFB SOFTWARE REVIEW, inc subsections: Neurofeedback software, Wearable EEG sensors
 \input{nfb_software_review}
+
+%Our Competition / state of the art…
+%Random studies
+%%http://musaelab.ca/pdfs/C90A.pdf
+%%http://europepmc.org/abstract/med/25882342
+%%http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4311636/
+%%http://www.sciencedirect.com/science/article/pii/S016787601300247X
+%
+%paid professional products
+%% http://bio-medical.com/products/software.html?dir=asc&order=price
+%Neuroelectrics Neurosurfer 'VR' environment
+%
+%
+%23 repos (maybe 2 or 3 decent-looking ones)
+%%https://github.com/search?p=1&q=neurofeedback&type=Repositories&utf8=%E2%9C%93
+%
+%helpful wikipedia page - lists 6 open or GPL warez, inc OpenVIBE
+%%https://en.wikipedia.org/wiki/Comparison_of_neurofeedback_software
+%
+%Free software for specific hardware:
+%Nova Tech!
+%%http://www.novatecheeg.com/downloads.html
+%Vilistus
+%%http://www.vilistus.com/software.shtml
+
+
+
 % some solution
 \subsection{CENT platform}
 
 % development: brief history of CENT use, clinical trial (number)...
-\todo[inline]{development: brief history of CENT use, clinical trial (number)}
-The CENT platform was developed to facilitate the CENT clinical trial of NFB treatment for adult ADHD, conducted at the University of Helsinki, Finland (REF). 
+The CENT platform was developed to facilitate the CENT clinical trial of NFB treatment for adult ADHD, conducted at the University of Helsinki, Finland \footnote{Clinical trial registered with ISRCTN, DOI 10.1186/ISRCTN13915109}. In the context of the CENT trial, the CENT platform was used with 25 patients, during approximately 40 NFB sessions of 1 hour per patient. Two separate models of EEG amplifier were supported during this trial, along with two NFB protocols (TB and SMR), in two different modes (normal and inverse).  Thus in total eight separate conditions of NFB training were supported by the platform. More detail is given in section \ref{cent:trial} below.
 
 
 % specifics: CENT platform. Advantages
@@ -161,6 +196,7 @@ The core software defines a workflow for NFB sessions, but can be extended by th
 
 
 \section{Results - Validation}
+\label{cent:trial}
 
 \begin{itemize}
 	\item Clinical trial
@@ -239,9 +275,6 @@ Use the table and tabular commands for basic tables --- see Table~\ref{tab:widge
 	\caption{\label{tab:widgets}An example table.}
 \end{table}
 
-\subsection*{Citations}
-
-LaTeX formats citations and references automatically using the bibliography records in your .bib file, which you can edit via the project menu. Use the cite command for an inline citation, like \cite{Figueredo:2009dg}, and the citep command for a citation in parentheses \citep{Figueredo:2009dg}.
 
 \subsection*{Mathematics}
 
@@ -273,6 +306,6 @@ You can make lists with automatic numbering \dots
 We hope you find write\LaTeX\ useful for your PeerJ submission, and please let us know if you have any feedback. Further examples with dummy text are included in the following pages.
 
 
-\bibliography{CENTrefs,nfb_software_review, signal_processing}
+\bibliography{CENTrefs,nfb_software_review,signal_processing}
 
 \end{document}
