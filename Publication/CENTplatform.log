@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.3.4)  4 JAN 2016 17:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.3.4)  5 JAN 2016 11:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1086,22 +1086,13 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
-
- []
-
-[3] (./nfb_software_review.tex
+ [2] [3]
+(./nfb_software_review.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 6.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -1110,34 +1101,43 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `pcr' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4]) [5] (./signal_processing.tex
+ [4]) [5]
+(./platform_arch.tex) (./signal_processing.tex
+LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <9> not available
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <9> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 3.
+ [6]
 Overfull \hbox (74.03922pt too wide) in paragraph at lines 10--22
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6] <noise.png, id=31, 546.04pt x 514.92375pt>
+<noise.png, id=32, 546.04pt x 514.92375pt>
 File: noise.png Graphic file (type png)
  <use noise.png>
 Package pdftex.def Info: noise.png used on input line 38.
 (pdftex.def)             Requested size: 218.41212pt x 205.96585pt.
- [7 <./noise.png>] <baseline.png, id=38, 900.36375pt x 781.92125pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<baseline.png, id=34, 900.36375pt x 781.92125pt>
 File: baseline.png Graphic file (type png)
  <use baseline.png>
 Package pdftex.def Info: baseline.png used on input line 47.
 (pdftex.def)             Requested size: 270.1112pt x 234.57819pt.
 
-<config.png, id=39, 352.31625pt x 147.55125pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7] <config.png, id=39, 352.31625pt x 147.55125pt>
 File: config.png Graphic file (type png)
  <use config.png>
 Package pdftex.def Info: config.png used on input line 56.
 (pdftex.def)             Requested size: 140.924pt x 59.01944pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 <game.png, id=40, 1398.22375pt x 847.165pt>
 File: game.png Graphic file (type png)
@@ -1152,8 +1152,7 @@ Overfull \hbox (4.34465pt too wide) in paragraph at lines 65--66
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8 <./baseline.png> <./config.png>]
-<sections.png, id=46, 1398.22375pt x 847.165pt>
+<sections.png, id=41, 1398.22375pt x 847.165pt>
 File: sections.png Graphic file (type png)
  <use sections.png>
 Package pdftex.def Info: sections.png used on input line 74.
@@ -1162,16 +1161,17 @@ Package pdftex.def Info: sections.png used on input line 74.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9 <./game.png>] <IAF.png, id=51, 655.41414pt x 263.5363pt>
+[8 <./noise.png>] [9 <./baseline.png> <./config.png>]
+<IAF.png, id=51, 655.41414pt x 263.5363pt>
 File: IAF.png Graphic file (type png)
  <use IAF.png>
 Package pdftex.def Info: IAF.png used on input line 109.
 (pdftex.def)             Requested size: 262.16101pt x 105.41264pt.
-)
-[10] [11]
+ [10 <./game.png>])
+(./software_ext.tex) [11] [12]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 259.
- (./CENTplatform.bbl [12]
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 257.
+ (./CENTplatform.bbl [13]
 Overfull \hbox (0.72998pt too wide) in paragraph at lines 49--53
 \OT1/ptm/m/n/10 (-20) for eeg neurofeedback: Peculiarities and solutions.  \OT1
 /ptm/m/it/10 (-20) International Journal of Psychophysiology\OT1/ptm/m/n/10 (-2
@@ -1180,15 +1180,15 @@ Overfull \hbox (0.72998pt too wide) in paragraph at lines 49--53
 
 ) 
 AED: lastpage setting LastPage
-[13] [14 <./sections.png>] [15 <./IAF.png>] (./CENTplatform.aux) ) 
+[14] [15 <./sections.png>] [16 <./IAF.png>] (./CENTplatform.aux) ) 
 Here is how much of TeX's memory you used:
- 18559 strings out of 494434
- 339896 string characters out of 6171964
- 528008 words of memory out of 5000000
- 21156 multiletter control sequences out of 15000+600000
- 63265 words of font info for 244 fonts, out of 8000000 for 9000
+ 18576 strings out of 494434
+ 340169 string characters out of 6171964
+ 526974 words of memory out of 5000000
+ 21168 multiletter control sequences out of 15000+600000
+ 64823 words of font info for 244 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 62i,12n,80p,1966b,606s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,11n,80p,1315b,606s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/t
 exlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
@@ -1197,15 +1197,16 @@ ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rs
 fs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CENTplatform.pdf (15 pages, 335954 bytes).
+ive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/u
+syr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on CENTplatform.pdf (16 pages, 347140 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 47147 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 47659 words of extra memory for PDF output out of 51595 (max. 10000000)
 

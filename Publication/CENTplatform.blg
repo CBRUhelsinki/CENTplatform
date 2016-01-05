@@ -5,10 +5,9 @@ The style file: apalike.bst
 Database file #1: CENTrefs.bib
 Database file #2: nfb_software_review.bib
 Database file #3: signal_processing.bib
-Warning--I didn't find a database entry for "Figueredo:2009dg"
 You've used 16 entries,
             1935 wiz_defined-function locations,
-            582 strings with 7485 characters,
+            580 strings with 7453 characters,
 and the built_in function-call counts, 6906 in all, are:
 = -- 662
 > -- 355
@@ -47,4 +46,3 @@ warning$ -- 0
 while$ -- 57
 width$ -- 0
 write$ -- 210
-(There was 1 warning)

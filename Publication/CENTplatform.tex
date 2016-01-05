@@ -37,7 +37,7 @@ Story/structure is:
 \begin{enumerate}
 	\item Introduction + motivation
 	\begin{itemize}
-		\item we needed a NFB platform and didn’t find anything suitable (why not?)
+		\item we needed a NFB platform and didn't find anything suitable (why not?)
 		\item we developed CENT platform at the same time as setting up the clinical trial
 		\item we aimed for lots of good things: modular, extensible, state of the art technology, effective but simple UI, minimal but extensible feature set
 		\item other systems exist but CENT fills a niche because...
@@ -52,13 +52,13 @@ Story/structure is:
 	\item Architecture - describe the tech. Show where to get it and the compatible parts
 	\begin{itemize}
 		\item CENT-core
+		\item OV-signal proc [DONE!]
 		\item CENT-extensions
 	\end{itemize}
 
 	\item Validation
 	\begin{itemize}
-		\item Malmi therapy?
-		\item Can other validation evidence be generated?
+		\item Malmi therapy
 	\end{itemize}
 
 	\item Discussion
@@ -116,10 +116,10 @@ TB protocol assumes a model where theta power is elevated above normal, and ther
 
 SMR protocol reinforces beta power, usually low or mid beta, often with an inhibition target for theta. The site is above the sensorimotor strip, often lateral, such that the beta oscillations correspond to the sensorimotor rhythm. The rationale for SMR training has been proposed as either facilitating attention \citep{Vernon2003}, or the improvement of sleep through an increase in beta spindles, with concomitant effects on cognitive function \citep{Arns2014}.
 
-These protocols contrast with another widely-studied protocol, Slow Cortical Potentials (SCP) training, which feeds back the time domain DC component. SCP targets the Contingent Negative Variation (CNV) Event Related Potential, which \cite{Mayer2015} defined as “a slow negative shift over central sites that develops following the presentation of warning stimulus in expectancy of an imperative stimulus that requires a response”. SCP uses two opposed cortical regulation targets to be trained in random consecutive order. The TB and SMR protocols do not include such an explicit set of counter-poised targets to induce self-regulation, relying instead on a single target of reinforcement/inhibition, which is trained repeatedly. \\
-\\
+These protocols contrast with another widely-studied protocol, Slow Cortical Potentials (SCP) training, which feeds back the time domain DC component. SCP targets the Contingent Negative Variation (CNV) Event Related Potential, which \cite{Mayer2015} defined as “a slow negative shift over central sites that develops following the presentation of warning stimulus in expectancy of an imperative stimulus that requires a response”. SCP uses two opposed cortical regulation targets to be trained in random consecutive order. The TB and SMR protocols do not include such an explicit set of counter-poised targets to induce self-regulation, relying instead on a single target of reinforcement/inhibition, which is trained repeatedly.
 
 %more depth to problem statement
+\paragraph{Challenges}
 The field of NFB makes progress, but in technical terms it does so slowly. The protocols introduced by \cite{Lubar1976} and others have remained unchanged for 40 years. As with any technology, progress relies not just on research, but also on adoption and exploration of the potential by developers. Rapid advances have recently been made in EEG-amplifier hardware and signal processing software, yet the software needed to facilitate open and rapid research and development in clinical NFB is lacking (see below). Opening the field calls for software which is robust, and entirely open source, extensible and free.
 
 
@@ -159,54 +159,63 @@ The field of NFB makes progress, but in technical terms it does so slowly. The p
 % development: brief history of CENT use, clinical trial (number)...
 The CENT platform was developed to facilitate the CENT clinical trial of NFB treatment for adult ADHD, conducted at the University of Helsinki, Finland \footnote{Clinical trial registered with ISRCTN, DOI 10.1186/ISRCTN13915109}. In the context of the CENT trial, the CENT platform was used with 25 patients, during approximately 40 NFB sessions of 1 hour per patient. Two separate models of EEG amplifier were supported during this trial, along with two NFB protocols (TB and SMR), in two different modes (normal and inverse).  Thus in total eight separate conditions of NFB training were supported by the platform. More detail is given in section \ref{cent:trial} below.
 
-
 % specifics: CENT platform. Advantages
-\todo[inline]{specifics: CENT platform. Advantages}
-The CENT platform was designed to connect light-weight EEG amplifiers to a simple, easy-to-use interface for running NFB sessions. The platform's workflow is fixed but adaptable, with configurable settings for personalisation of the treatment. 
-\begin{enumerate}
-	\item ...modifiers for the baseline values ...
-	\item ...different games...
-	\item ...performance review options...
-\end{enumerate}
+The CENT platform was designed to connect light-weight EEG amplifiers to a simple, easy-to-use interface for running NFB sessions. The platform's workflow is fixed but adaptable, with configurable settings for personalisation of the treatment, including:
+\begin{itemize}
+	\item capability to modify the spectral values recorded at baseline, thereby increasing or decreasing difficulty of the task
+	\item different games with different levels of stimulation and different 'look and feel'
+	\item options to review performance
+\end{itemize}
 
+With the existing range of features, the platform demonstrates its utility for the task of clinical neurofeedback. Additionally, with an open, robust, modular architecture it is ideal for extension to add new features or explore other application possibilities.
+
+\paragraph{Outline}
+In the rest of this paper, we will first describe in section \ref{methods} the CENT platform, including the core architecture, the signal processing framework, and the options for adding software extensions. Then, in section \ref{cent:trial}, we will describe a validating example of how the platform was used. Finally in section \ref{disc} we discuss the implications for the platform, and possible future work and conclusions.
 
 
 
 \section{Methods - Architecture}
-\input{signal_processing}
+\label{methods}
 % platform technology
-\todo[inline]{platform technology}
-The CENT platform is built on Qt…
+\input{platform_arch}
+\todo[inline]{todo: platform technology}
 
-% modular, extensible
-\todo[inline]{modular, extensible}
-\todo[inline]{Extensions through OV scenarios is covered in Signal processing section.  }
+
+%Extensions through OV scenarios is covered in Signal processing section.
+\input{signal_processing}
+
+
+% modular, extensible, software additions
+\input{software_ext}
+\todo[inline]{todo: write about this modular, extensible stuff}
+
 
 
 
 \section{Results - Validation}
 \label{cent:trial}
 
-\begin{itemize}
-	\item Clinical trial
-	
-	\item artificial example?
-	
-\end{itemize}
-
-
+\subsection{Clinical trial}
+\lipsum[09]
 
 
 
 \section{Discussion}
-
+\label{disc}
+\begin{itemize}
+	\item We saw a need and filled it
+	\item Pros and cons
+	\item CENT vs. “Meditation toys”
+	\item Usage scenario
+	\item Future work: Interfacing with bestest systems (like MIDAS)
+\end{itemize}
 \lipsum[10] % Dummy text
 
 
 
 
 
-\section{Conclusion}
+\subsection{Conclusion}
 
 \lipsum[11] % Dummy text
 
