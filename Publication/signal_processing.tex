@@ -3,35 +3,38 @@
 \subsubsection{Overview of signal processing architecture}
 The signal processing back-end of the CENT system was implemented using the open-souce OpenViBE platform \cite{renard2010openvibe}. The OpenViBE platform consists of a visual modelling language (similar to LabView or Simulink) which enables the design of various signal processing protocols, called \textit{scenarios} in the OpenViBE terminology. The scenarios can be drawn by connecting boxes representing various operations to each other in order to produce to a flowchart of how the data is processed. CENT integrates a fully functional version of OpenViBE which means that the original editor can be used to design new protocols or to modify the existing ones.
 
-The signal processing back-end of the CENT system contains multiple OpenViBE scenarios. A list of scenarios required for a typical NFB session can be found in table \ref{scenariolist}. Scenario-files can be found in the \textit{scenarios} subfolder of the CENT installation. Scenarios themselves are constructed using existing modules known as 'Boxes'. Boxes range from very simple (such as squaring each signal value) to more advanced (such as linear discrimant analysis or support vector machine classifications). Information between boxes is passed as streams of data. OpenViBE has multiple different streams but the two most important for the CENT system are 'Signals' and 'Stimulations'. Signals are simply chunks of EEG data that contain a buffer of the raw voltage values and the sampling rate used to acquire them. Stimulations are similar to trigger codes in most EEG applications and can be used to convey meta information like classification results or signal quality. Most of the common EEG signal analysis operations can be completed using a different combination of available boxes and streams. It is important to note that due to the open source nature of OpenViBE it is also possible to write new boxes for desired functionality.
+The signal processing back-end of the CENT system contains multiple OpenViBE scenarios. A list of scenarios required for a typical NFB session can be found in table \ref{scenariolist}. Scenario-files can be found in the \textit{scenarios} subfolder of the CENT installation. Scenarios themselves are constructed using existing modules known as 'Boxes'. Boxes range from very simple (such as squaring each signal value) to more advanced (such as linear discrimant analysis or support vector machine classifications). Information between boxes is passed as streams of data. OpenViBE has multiple different streams but the two most important for the CENT system are 'Signals' and 'Stimulations'. Signals are simply chunks of EEG data that contain a buffer of the raw voltage values and the sampling rate used to acquire them. Stimulations are similar to trigger codes in most EEG applications and can be used to convey meta information like classification results or signal quality. Most of the common EEG signal analysis operations can be completed using some combination of available boxes and streams. It is important to note that due to the open source nature of OpenViBE it is also possible to write new boxes for desired functionality.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{ll}
 	\hline
 	cent\_monitoring\_and\_noise.xml & Scenario for online monitoring of the 
-	signal and checking the signal quality \\
-	\hline
+	signal and checking the \\
+	&  signal quality \\
+	\noalign{\smallskip}
 	cent\_baseline.xml & Baseline measurement \\
-	\hline
-	cent\_generate\_configuration.xml & A utlity sceneario used to generate configuration files required for the actual session \\
-	\hline
+	\noalign{\smallskip}
+	cent\_generate\_configuration.xml & A utlity sceneario used to generate configuration files required for \\
+	& the actual session \\
+	\noalign{\smallskip}
 	cent\_game.xml & The main scenario for the therapy session \\
 	\hline
 \end{tabular}
     \caption{List of OpenViBE scenarios used in CENT}\label{scenariolist}
 \end{table}
 
-Parameters for different boxes can either be set manually in the designer or they can be specified in a separate XML configuration file. Functionality of OpenViBE scenarios can be expanded using scripts written in Lua or Python languages. For more detailed explanation of box configuration see section GG.
+Parameters for different boxes can either be set manually in the designer or they can be specified in a separate XML configuration file. Functionality of OpenViBE scenarios can be expanded using scripts written in Lua or Python languages. For more detailed explanation of box configuration see \cite{renard2010openvibe}.
 
-Although box system is very flexible and grants much freedom in experiment design the implementations of even simple routines tend to be large. For example feature extraction of signal powers from few frequency bands can require the use of multiple boxes. Furthermore the implementation of these processes requires a certain level of knowledge regarding signal processing and might not be intuitive to the end user. For this reason to end user will not need to modify the OpenViBE scenarios in order to use the CENT system. Most of the necessary changes to the parameters can be done from within the CENT system and through configuration files.
+Although the box system is very flexible and gives freedom in experiment design, the implementations of even simple routines tend to require many boxes. For example feature extraction of signal powers from few frequency bands can require the use of multiple boxes. Furthermore the implementation of these processes requires a certain level of knowledge regarding signal processing and might not be intuitive to the end user. For this reason the end user will not need to modify the OpenViBE scenarios in order to use the CENT system. Most of the necessary changes to the parameters can be done from within the CENT system and through configuration files.
 
-The overall aim of the signal processing back-end is to classify the mental state of the patient to ADHD and non-ADHD based on the power modulations of theta and beta power bands of the EEG. In practice this is done by first acquiring a baseline recording of the theta and beta powers. Baseline is 60 second EEG recording where patient is just sitting still and staring at the fixation cross displayed on the monitor. In the subsequent game session the current power values of theta and beta are compared to the baseline values to determine shifts in the mental state. According to literature ADHD patient have excessive activity in the theta band and lower than average activity in the beta band. The desired effect is thus a decrease in beta and an increase in beta band. The change (whether positive or negative) is registered by the signal analysis module and passed back to the CENT system. The behaviour of the game is then modified based on this classification result. The patient receives the feedback as either success or failure in the game and thus slowly learns to modify their neural patterns.
+The overall aim of the signal processing back-end is to classify the neurological state of the patient, based on power modulations in frequency bands of the EEG. Upper and lower band limits are defined by the protocol in use. In practice classification is done by first acquiring a 60 second baseline recording of resting-state EEG. In the subsequent session the current power values are compared to threshold values extracted from the baseline to generate classifications. Positive classifications occur when changes in the EEG power (registered by the signal analysis module and passed back to the CENT system) in relevant bands matches or exceeds (positively or negatively) the baseline thresholds. Positive classifications modify the behaviour of the game, to give contingent feedback to the patient who thus slowly learns to modify their neural patterns.
 
-This section briefly describes the operation of each of the scenario files. Each scenario can be divided into functional subelements that correspond to a certain step in a typical BCI processing chain. More information on the behaviour of the subelements can be found in the Signal processing protocol section, where structure and behaviour of different components are described.
+\subsubsection{Scenarios}
+This section briefly describes the operation of each of the scenario files. Each scenario can be divided into functional sub-elements that correspond to a certain step in a typical BCI processing chain. More information on the behaviour of the sub-elements can be found in the Signal processing protocol section, where structure and behaviour of different components are described.
 
 \paragraph{Monitoring and noise}
-Monitoring scenario is responsible for displaying the live EEG and current noise level at the beginning of the therapy session. This scenario is mainly a tool for making sure that the electrodes are properly fixed and that the data streaming is working. Figure \ref{monitoringnoise} shows the structure of the scenario. The scenario structure is relatively simple consisting only of acquisition client, filters and a noise calculator. The same structure is also used inside baseline and game scenarios.
+Monitoring scenario is responsible for displaying the live EEG and current noise level at the beginning of the therapy session. This scenario is mainly a tool for making sure that the electrodes are properly fixed and that the data streaming is working. Figure \ref{monitoringnoise} shows the structure of the scenario. The scenario structure is relatively simple consisting only of acquisition client, filters and a noise calculator. The same structure is integrated into baseline and game scenarios.
 
 \begin{figure}[h]
 	\centering
@@ -40,7 +43,7 @@ Monitoring scenario is responsible for displaying the live EEG and current noise
 \end{figure}  
 
 \paragraph{Baseline}
-Baseline scenario is used to determine the baseline values for theta and beta power bands. During the baseline recording patient will be fixating on a cross displayed by the CENT system. Therapist screen will display the live EEG as well as the noise bar. Duration of the baseline recording is 60 seconds with 10 second offsets at the beginning and end of the recording. The recorded data is split to segments of 5 seconds and for each segment the power values are calculated using the same procedure as in the game scenario (this procedure is explained in greater detail in section NN). Finally the segments are are averaged to produce the final baseline values for the session. In addition to the baseline values a complete power spectrum is calculated using the entire recording. Both the baseline values and the spectrum are displayed after the baseline recording for quality assurance.
+Baseline scenario is used to determine the baseline frequency-band power values. During the baseline recording patient will be fixating on a cross displayed by the CENT system. Therapist screen will display the live EEG as well as the noise bar. Duration of the baseline recording is 60 seconds with 10 second offsets at the beginning and end of the recording. The recorded data is split to segments of 5 seconds and for each segment the power values are calculated using the same procedure as in the game scenario (this procedure is explained in greater detail in section NN). Finally the segments are are averaged to produce the final baseline values for the session. In addition to the baseline values a complete power spectrum is calculated using the entire recording. Both the baseline values and the spectrum are displayed after the baseline recording for quality assurance.
 
 \begin{figure}[h]
 	\centering
@@ -58,13 +61,8 @@ Configuration generation scenario is a utility tool used to generate configurati
 \end{figure}  
 
 \paragraph{Game}
-Game scenario evaluates the current mental state of the patient and send information back to CENT. The scenario calculates power values for theta and beta using 1 second epochs and compares them to the values calculated during baseline measurement. The game scenario does not actually do anything related to the game as the actual game mechanics are handled by an external plugin. The OpenViBE implementation of the game trial is visible in figure \ref{gametrial}
+Game scenario evaluates the current mental state of the patient and send information back to CENT. The scenario calculates power values for theta and beta using 1 second epochs and compares them to the values calculated during baseline measurement. The game scenario does not actually do anything related to the game as the actual game mechanics are handled by an external plugin. The OpenViBE implementation of the game trial is visible in figure \ref{processingsections}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.3]{game.png}
-	\caption{OpenViBE scenario for the game trial.}\label{gametrial}
-\end{figure}
   
 \subsubsection{Signal Processing Protocol}
 NFB signal processing protocol is closely related to the protocol used with brain-computer interfaces (BCI). It thus follows that the signal processing operations performed in a NFB session can be described by borrowing terminology from the field of BCI. In BCI a typical signal processing protocol is divided into four different steps: preprocessing, feature extraction, classification and translation. Preprocessing consists of removing noise and other artifacts from the signal. Feature extraction removes unecessary parts of the signal and classification assigns one of the predefined classes to the incoming signal. Finally the translation performs the action related to the assigned class (such as moving a cursor etc.). In NFB instead of a translation a feedback signal is sent back to the patient i.e, the game reacts to the current neural state. Different signal processing sections of the game scenario have been highlighted in figure \ref{processingsections}. The operation of each section is covered in the following sections.
