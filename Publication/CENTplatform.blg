@@ -5,44 +5,44 @@ The style file: apalike.bst
 Database file #1: CENTrefs.bib
 Database file #2: nfb_software_review.bib
 Database file #3: signal_processing.bib
-You've used 16 entries,
+You've used 15 entries,
             1935 wiz_defined-function locations,
-            580 strings with 7453 characters,
-and the built_in function-call counts, 6906 in all, are:
-= -- 662
-> -- 355
-< -- 5
-+ -- 124
-- -- 124
-* -- 652
-:= -- 1235
-add.period$ -- 48
-call.type$ -- 16
-change.case$ -- 141
-chr.to.int$ -- 16
-cite$ -- 16
-duplicate$ -- 221
-empty$ -- 437
-format.name$ -- 144
-if$ -- 1296
+            576 strings with 7316 characters,
+and the built_in function-call counts, 6643 in all, are:
+= -- 635
+> -- 348
+< -- 4
++ -- 122
+- -- 122
+* -- 634
+:= -- 1182
+add.period$ -- 45
+call.type$ -- 15
+change.case$ -- 136
+chr.to.int$ -- 15
+cite$ -- 15
+duplicate$ -- 209
+empty$ -- 420
+format.name$ -- 141
+if$ -- 1248
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 15
-newline$ -- 83
-num.names$ -- 48
-pop$ -- 106
+newline$ -- 78
+num.names$ -- 45
+pop$ -- 102
 preamble$ -- 1
-purify$ -- 142
+purify$ -- 136
 quote$ -- 0
-skip$ -- 166
+skip$ -- 156
 stack$ -- 0
-substring$ -- 473
-swap$ -- 16
+substring$ -- 461
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
+type$ -- 90
 warning$ -- 0
-while$ -- 57
+while$ -- 55
 width$ -- 0
-write$ -- 210
+write$ -- 197
