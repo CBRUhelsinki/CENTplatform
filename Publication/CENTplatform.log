@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.3.4)  15 JAN 2016 14:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.3.4)  19 JAN 2016 09:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1171,45 +1171,52 @@ File: IAF.png Graphic file (type png)
 Package pdftex.def Info: IAF.png used on input line 107.
 (pdftex.def)             Requested size: 262.16101pt x 105.41264pt.
 )
-(./software_ext.tex) [10] [11]
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 259.
- (./CENTplatform.bbl [12]
+(./software_ext.tex) [10] (./clinical_trial.tex
+Overfull \hbox (0.76682pt too wide) in paragraph at lines 3--4
+\OT1/ptm/m/n/10 (-20) We con-ducted a ran-domised con-trolled clin-i-cal trial 
+of neu-ro-feed-back ther-apy in-ter-ven-tion for ADHD/ADD
+ []
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 14.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 14.
+ [11]) [12]
+(./CENTplatform.bbl
 Overfull \hbox (0.72998pt too wide) in paragraph at lines 49--53
 \OT1/ptm/m/n/10 (-20) for eeg neurofeedback: Peculiarities and solutions.  \OT1
 /ptm/m/it/10 (-20) International Journal of Psychophysiology\OT1/ptm/m/n/10 (-2
 0) , 91(1):36--
  []
 
-) 
+[13]) 
 AED: lastpage setting LastPage
-[13] [14 <./sections.png>] [15 <./IAF.png>] (./CENTplatform.aux) ) 
+[14] [15 <./sections.png>] [16 <./IAF.png>] (./CENTplatform.aux) ) 
 Here is how much of TeX's memory you used:
- 18654 strings out of 494434
- 341019 string characters out of 6171964
- 528707 words of memory out of 5000000
- 21245 multiletter control sequences out of 15000+600000
- 64622 words of font info for 242 fonts, out of 8000000 for 9000
+ 18669 strings out of 494434
+ 341360 string characters out of 6171964
+ 528853 words of memory out of 5000000
+ 21262 multiletter control sequences out of 15000+600000
+ 60108 words of font info for 233 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
  62i,11n,80p,1308b,606s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/t
 exlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rs
-fs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/u
-syr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CENTplatform.pdf (15 pages, 298107 bytes).
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/cou
+rier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on CENTplatform.pdf (16 pages, 289069 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  47654 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -2,7 +2,8 @@
 
 We conducted a randomised controlled clinical trial of neurofeedback therapy intervention for ADHD/ADD in adults. The trial's main research aim was to focus on the model and internal mechanics of neurofeedback learning, to elucidate the primary role of cortical self-regulation in neurofeedback.
 
-\paragraph{Trial Registration}. The trial was registered with ISRCTN as "Computer Enabled Neuroplasticity Treatment (CENT)", ISRCTN13915109.
+\paragraph{Trial Registration}
+The trial was registered with ISRCTN as "Computer Enabled Neuroplasticity Treatment (CENT)", ISRCTN13915109.
 
 
 \subsubsection{Methods/Design}
@@ -15,24 +16,30 @@ After randomisation between treatment and control groups, we assigned participan
 NFB interventions were standardised by scheduling of the training sessions: session duration was fixed; and training blocks per session, sessions per week, timing of the break from training, and total duration of training were all constrained to equalise the intervention. Treatment group participants began their treatment by being briefed about all aspects of the NFB protocols, e.g. length, frequency, purpose. Outcome measures were taken when all participants in the treatment group had completed 40 sessions NFB.
 
 
-\paragraph{Ethics}: Written informed consent for participation was obtained from all participants before entering the study. The protocol followed the Declaration of Helsinki for the rights of the participants and the procedures of the study. An ethical approval of the present research protocol for all participants was obtained from The Ethical Committee of the Hospital District of Helsinki and Uusimaa, 28/03/2012, 621/1999, 24 §. Participants were not remunerated.
+\paragraph{Ethics}
+Written informed consent for participation was obtained from all participants before entering the study. The protocol followed the Declaration of Helsinki for the rights of the participants and the procedures of the study. An ethical approval of the present research protocol for all participants was obtained from The Ethical Committee of the Hospital District of Helsinki and Uusimaa, 28/03/2012, 621/1999, 24 §. Participants were not remunerated.
 
-\paragraph{Setting}: intake and outtake measurements were conducted at University of Helsinki campus. Treatment was administered at partner clinic Mental Capital Care Oy, Helsinki.
+\paragraph{Setting}
+Intake and outtake measurements were conducted at University of Helsinki campus. Treatment was administered at partner clinic Mental Capital Care Oy, Helsinki.
 
-\paragraph{Randomisation}: Randomisation used a two-step procedure: randomisation of half of recruits, followed by adaptive allocation of the remainder to minimise baseline differences in prognostic variables.
+\paragraph{Randomisation}
+Randomisation used a two-step procedure: randomisation of half of recruits, followed by adaptive allocation of the remainder to minimise baseline differences in prognostic variables.
 
-\paragraph{Blinding}: Due to waiting list control design, trial was not blinded.
+\paragraph{Blinding}
+Due to waiting list control design, trial was not blinded.
 
-\paragraph{Participants}: 54 adult Finnish participants (29 females) were recruited after screening by psychiatric review. They had mean age 36 years (std.dev. 10 years), with 44 ADHD and 10 ADD diagnoses.
+\paragraph{Participants}
+54 adult Finnish participants (29 females) were recruited after screening by psychiatric review. They had mean age 36 years (std.dev. 10 years), with 44 ADHD and 10 ADD diagnoses.
 
-\paragraph{Measurements}: Participants’ symptoms were assessed by computerised attention test and self-report scales, at intake and outtake. Performance during neurofeedback trials was also measured.
+\paragraph{Measurements}
+Participants’ symptoms were assessed by computerised attention test and self-report scales, at intake and outtake. Performance during neurofeedback trials was also measured.
 
 
 \subsubsection{Results}
 Participants were split between treatment and control groups. Following random group assignment, treatment began September 17, 2012. Of 54 inducted to the trial, eight dropped out from waiting list group, and two from treatment group.
 
 \paragraph{Implementation}
-In practice, NFB training consisted of ~40 sessions (range: 38-41) during two to four months. There was a mid-training pause of nominally two weeks. Patients came to the sessions two to five times a week. One session lasted ~1 hour, subdivided into self-report of mood, excitement, hours slept and hours awake; electrode attachment; baseline measurement; five to seven units of five minute NFB trials; and debrief including self-report of effort and frustration. During each session, patients played different NFB ‘game’ trials during which they got immediate visual reinforcement for classifier-matching states in their EEG. The scores per game trial are baseline-adjusted and averaged per session to form characteristic LCs. The content and purpose of each training session followed a phased timeline:
+In practice, NFB training consisted of ~40 sessions (range: 38-41) during two to four months. There was a mid-training break of nominally two weeks. Patients came to the sessions two to five times a week. One session lasted ~1 hour, subdivided into self-report of mood, excitement, hours slept and hours awake; electrode attachment; baseline measurement; five to seven units of five minute NFB trials; and debrief including self-report of effort and frustration. During each session, patients played different NFB ‘game’ trials during which they got immediate visual reinforcement for classifier-matching states in their EEG. The scores per game trial are baseline-adjusted and averaged per session to form characteristic LCs. The content and purpose of each training session followed a phased timeline:
 
 \begin{enumerate}
 	\item Tutorial stage, for becoming accustomed to NFB, two practice sessions: participants were given normal NFB trials with baseline thresholds adjusted by a constant factor to make the training easier; 
@@ -49,5 +56,9 @@ In practice, NFB training consisted of ~40 sessions (range: 38-41) during two to
 Initial analysis showed that, compared to waiting list control, neurofeedback promoted improvement of self-reported ADHD symptoms. Additional detailed analyses are ongoing.
 
 
-\subsection{Use of the platform}
+\subsection{CENT platform in use}
 \todo[inline]{describe characteristics of using the platform, good e.g. flexibility, adding extra apps as desired, bad e.g. bluetooth streaming sucks}
+
+The CENT platform initially featured the two games described in \ref{games}, \textbf{simple ball} and \textbf{floating ball}. This was expanded \textit{during} the trial, to include a \textbf{movie player} game (developed by BLStream), and a game called \textbf{Astrocomet}. Astrocomet was designed initially for the commercial market, and adapted by the developer \textbf{Ludocraft} to work as a NFB game according to specifications provided by the lead author. Ludocraft then integrated the game to the CENT platform using the standard approach defined in the documentation.
+
+The CENT platform was thoroughly tested before deployment, so no software bugs were found during the trial. However, the system acquired data from the Enobio EEG amplifiers by bluetooth streaming connection, which seemed to become less reliable over time and several NFB trials failed due to lost connection. In an effort to fix this, we upgraded the EEG amplifiers to the next generation model, making the hardware switch during the mid-way break in training. The software corollary was the requirement for a new set of OpenVibe scenarios. All aspects of the upgrade, including resumption of training, went smoothly.
