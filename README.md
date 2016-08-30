@@ -1,2 +1,2 @@
 # CENTplatform
-Computer Enabled Nueroplasticity Treatment platform for neurofeedback with four or eight electrode Enobio devices
+Computer Enabled Neuroplasticity Treatment platform for neurofeedback with four or eight electrode Enobio devices
